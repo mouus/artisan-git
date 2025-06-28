@@ -19,7 +19,7 @@ export default function Home() {
       <div className="absolute inset-0 bg-black/40" />
 
       {/* Navigation Header */}
-      <div className="absolute top-0 left-0 right-0 z-20 p-6">
+      <div className="md:absolute md:top-0 md:left-0 md:right-0 md:z-20 md:p-6">
         <div className="flex justify-between items-center max-w-7xl mx-auto">
           <div className="flex items-center">
             <Image
@@ -34,7 +34,7 @@ export default function Home() {
       </div>
 
       {/* Hero Content */}
-      <div className="relative z-10 flex items-center justify-center min-h-screen mb-18">
+      <div className="relative z-10 flex items-center justify-center min-h-screen md:mb-18 mb-28">
         <div className="text-center px-4 max-w-4xl mx-auto">
           {/* Eyebrow Text */}
           {/* <div className="inline-block rounded-full bg-white/10 backdrop-blur-sm px-4 py-2 text-sm text-white/90 mb-6 border border-white/20">
