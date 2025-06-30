@@ -76,7 +76,7 @@ export default function Home() {
         </div>
 
         {/* Scroll Indicator */}
-        <div className="absolute bottom-20 left-1/2 transform -translate-x-1/2 z-10">
+        <div className="absolute mid:bottom-20 bottom-45 left-1/2 transform -translate-x-1/2 z-10">
           <div className="flex flex-col items-center text-white/60">
             <span className="text-sm mb-2">Scroll to explore</span>
             <div className="w-6 h-10 border-2 border-white/30 rounded-full flex justify-center">
