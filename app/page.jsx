@@ -311,7 +311,7 @@ export default function Home() {
                 <textarea
                   rows={4}
                   placeholder="e.g., tracking production downtime, integrating legacy systems..."
-                  className="w-full px-4 py-3 border border-slate-300 dark:border-slate-600 bg-white dark:bg-slate-700 text-slate-900 dark:text-white rounded-lg focus:ring-2 focus:ring-slate-500 focus:border-transparent transition-colors duration-300"
+                  className="w-full px-4 py-3 border border-slate-300 dark:border-slate-600 bg-white dark:bg-slate-700 text-slate-900 dark:text-white rounded-lg focus:ring-2 focus:ring-slate-500 focus:border-transparent transition-colors duration-300 dark:placeholder-slate-400"
                 ></textarea>
               </div>
               <button
