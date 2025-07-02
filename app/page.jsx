@@ -22,7 +22,6 @@ export default function Home() {
     const handleScroll = () => {
       if (heroTextRef.current) {
         const scrollY = window.scrollY
-        // Adjust the multiplier (e.g., 0.3) to control the speed of the parallax effect
         heroTextRef.current.style.transform = `translateY(-${scrollY * 0.3}px)`
       }
     }
@@ -36,7 +35,6 @@ export default function Home() {
 
   const toggleTheme = () => {
     setIsDark(!isDark)
-    // Also toggle class on the body to ensure consistent background
     document.body.classList.toggle("dark", !isDark)
   }
 
