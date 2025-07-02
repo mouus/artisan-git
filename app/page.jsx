@@ -1,7 +1,7 @@
 "use client"
 
 import Image from "next/image"
-import { useState } from "react"
+import { useState, useEffect, useRef } from "react"
 import {
   Sun,
   Moon,
@@ -16,6 +16,23 @@ import {
 
 export default function Home() {
   const [isDark, setIsDark] = useState(false)
+  const heroTextRef = useRef(null)
+
+  useEffect(() => {
+    const handleScroll = () => {
+      if (heroTextRef.current) {
+        const scrollY = window.scrollY
+        // Adjust the multiplier (e.g., 0.3) to control the speed of the parallax effect
+        heroTextRef.current.style.transform = `translateY(-${scrollY * 0.3}px)`
+      }
+    }
+
+    window.addEventListener("scroll", handleScroll)
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll)
+    }
+  }, [])
 
   const toggleTheme = () => {
     setIsDark(!isDark)
@@ -32,7 +49,7 @@ export default function Home() {
             <source src="/eye.mp4" type="video/mp4" />
             Your browser does not support the video tag.
           </video>
-          <div className="absolute inset-0 bg-black/50" />
+          <div className="absolute inset-0 bg-black/50 -z-10" />
 
           <header className="relative z-20 p-4">
             <div className="flex justify-between items-center max-w-7xl mx-auto">
@@ -40,8 +57,8 @@ export default function Home() {
                 <Image
                   src="/logo.svg"
                   alt="Artisan Edge Logo"
-                  width={120}
-                  height={120}
+                  width={1000}
+                  height={1000}
                   className="h-16 md:h-28 w-auto filter brightness-0 invert"
                 />
               </div>
@@ -55,7 +72,10 @@ export default function Home() {
             </div>
           </header>
 
-          <div className="relative z-10 flex items-center justify-center min-h-[calc(100vh-128px)]">
+          <div
+            ref={heroTextRef}
+            className="relative z-10 flex items-center justify-center min-h-[calc(100vh-128px)] transition-transform duration-100 ease-out"
+          >
             <div className="text-center px-4 max-w-5xl mx-auto">
               <div className="inline-block rounded-full mt-5 bg-white/10 backdrop-blur-sm px-6 py-3 text-sm text-white/90 mb-8 border border-white/20">
                 🚀 Launch Campaign – Fall 2025
