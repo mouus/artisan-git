@@ -256,6 +256,7 @@ export default function Home() {
                   <label className="block text-sm font-medium text-slate-700 dark:text-slate-300 mb-2">Full Name</label>
                   <input
                     type="text"
+                    placeholder="Jane Doe"
                     className="w-full px-4 py-3 border border-slate-300 dark:border-slate-600 bg-white dark:bg-slate-700 text-slate-900 dark:text-white rounded-lg focus:ring-2 focus:ring-slate-500 focus:border-transparent transition-colors duration-300"
                   />
                 </div>
@@ -265,18 +266,53 @@ export default function Home() {
                   </label>
                   <input
                     type="text"
+                    placeholder="Acme Inc."
+                    className="w-full px-4 py-3 border border-slate-300 dark:border-slate-600 bg-white dark:bg-slate-700 text-slate-900 dark:text-white rounded-lg focus:ring-2 focus:ring-slate-500 focus:border-transparent transition-colors duration-300"
+                  />
+                </div>
+              </div>
+              <div className="grid md:grid-cols-2 gap-6">
+                <div>
+                  <label className="block text-sm font-medium text-slate-700 dark:text-slate-300 mb-2">Job Title</label>
+                  <input
+                    type="text"
+                    placeholder="Operations Manager"
+                    className="w-full px-4 py-3 border border-slate-300 dark:border-slate-600 bg-white dark:bg-slate-700 text-slate-900 dark:text-white rounded-lg focus:ring-2 focus:ring-slate-500 focus:border-transparent transition-colors duration-300"
+                  />
+                </div>
+                <div>
+                  <label className="block text-sm font-medium text-slate-700 dark:text-slate-300 mb-2">
+                    Business Email
+                  </label>
+                  <input
+                    type="email"
+                    placeholder="jane.doe@acme.com"
                     className="w-full px-4 py-3 border border-slate-300 dark:border-slate-600 bg-white dark:bg-slate-700 text-slate-900 dark:text-white rounded-lg focus:ring-2 focus:ring-slate-500 focus:border-transparent transition-colors duration-300"
                   />
                 </div>
               </div>
               <div>
                 <label className="block text-sm font-medium text-slate-700 dark:text-slate-300 mb-2">
-                  Business Email
+                  Industry / Sector
                 </label>
-                <input
-                  type="email"
+                <select className="w-full px-4 py-3 border border-slate-300 dark:border-slate-600 bg-white dark:bg-slate-700 text-slate-900 dark:text-white rounded-lg focus:ring-2 focus:ring-slate-500 focus:border-transparent transition-colors duration-300">
+                  <option>Select Industry</option>
+                  <option>Manufacturing</option>
+                  <option>Logistics & Warehousing</option>
+                  <option>Food Service</option>
+                  <option>OEM & Integrators</option>
+                  <option>Other</option>
+                </select>
+              </div>
+              <div>
+                <label className="block text-sm font-medium text-slate-700 dark:text-slate-300 mb-2">
+                  Primary Automation Challenge (optional)
+                </label>
+                <textarea
+                  rows={4}
+                  placeholder="e.g., tracking production downtime, integrating legacy systems..."
                   className="w-full px-4 py-3 border border-slate-300 dark:border-slate-600 bg-white dark:bg-slate-700 text-slate-900 dark:text-white rounded-lg focus:ring-2 focus:ring-slate-500 focus:border-transparent transition-colors duration-300"
-                />
+                ></textarea>
               </div>
               <button
                 type="submit"
@@ -335,24 +371,7 @@ export default function Home() {
             </div>
           </div>
         </footer>
-          {/* Sticky Footer CTA */}
-      {/* <div className="fixed bottom-0 left-0 right-0 bg-blue-600 text-white p-4 z-50 shadow-lg">
-        <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-4">
-          <p className="text-sm md:text-base">
-            Artisan Edge launches Fall 2025. Don't miss your opportunity to lead with smarter automation.
-          </p>
-          <div className="flex gap-3">
-            <button className="bg-white text-blue-600 px-4 py-2 rounded-full text-sm font-semibold hover:bg-white/90 transition-colors">
-              Request Early Access
-            </button>
-            <button className="border border-white text-white px-4 py-2 rounded-full text-sm font-semibold hover:bg-white/10 transition-colors">
-              Book a Demo
-            </button>
-          </div>
-        </div>
-      </div> */}
       </div>
-      
     </div>
   )
 }
