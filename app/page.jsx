@@ -289,14 +289,70 @@ export default function Home() {
         </section>
 
         {/* Footer */}
-        <footer className="bg-slate-100 dark:bg-slate-900 text-slate-600 dark:text-slate-400 py-16">
+        <footer className="bg-slate-950 text-slate-300 py-16">
           <div className="max-w-7xl mx-auto px-4">
-            <div className="border-t border-slate-200 dark:border-slate-800 pt-8 text-center">
+            <div className="grid md:grid-cols-4 gap-8 mb-12">
+              <div className="md:col-span-2">
+                <Image
+                  src="/logo.svg"
+                  alt="Artisan Edge Logo"
+                  width={120}
+                  height={40}
+                  className="h-10 w-auto filter brightness-0 invert mb-6"
+                />
+                <p className="text-slate-400 mb-6">
+                  Artisan Technologies builds intelligent automation software that connects machines, people, and data.
+                  Our flagship platform, Artisan Edge, helps you modernize industrial operations with speed, clarity,
+                  and impact.
+                </p>
+                <div className="space-y-2 text-slate-400">
+                  <p>📧 sales@artisantec.io</p>
+                  <p>🌐 www.artisantec.io</p>
+                  <p>📞 (419) 481-6976</p>
+                </div>
+              </div>
+              <div>
+                <h3 className="text-lg font-semibold text-white mb-4">Security</h3>
+                <ul className="space-y-2 text-slate-400 text-sm">
+                  <li>End-to-end TLS encryption</li>
+                  <li>Role-based access controls</li>
+                  <li>Offline-first execution</li>
+                  <li>Audit logging & compliance</li>
+                </ul>
+              </div>
+              <div>
+                <h3 className="text-lg font-semibold text-white mb-4">Solutions</h3>
+                <ul className="space-y-2 text-slate-400 text-sm">
+                  <li>Custom Solutions</li>
+                  <li>Enterprise Deployment</li>
+                  <li>Integration Services</li>
+                  <li>Support & Training</li>
+                </ul>
+              </div>
+            </div>
+            <div className="border-t border-slate-800 pt-8 text-center text-slate-500">
               <p>&copy; 2025 Artisan Technologies. All rights reserved.</p>
             </div>
           </div>
         </footer>
+          {/* Sticky Footer CTA */}
+      {/* <div className="fixed bottom-0 left-0 right-0 bg-blue-600 text-white p-4 z-50 shadow-lg">
+        <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-4">
+          <p className="text-sm md:text-base">
+            Artisan Edge launches Fall 2025. Don't miss your opportunity to lead with smarter automation.
+          </p>
+          <div className="flex gap-3">
+            <button className="bg-white text-blue-600 px-4 py-2 rounded-full text-sm font-semibold hover:bg-white/90 transition-colors">
+              Request Early Access
+            </button>
+            <button className="border border-white text-white px-4 py-2 rounded-full text-sm font-semibold hover:bg-white/10 transition-colors">
+              Book a Demo
+            </button>
+          </div>
+        </div>
+      </div> */}
       </div>
+      
     </div>
   )
 }
