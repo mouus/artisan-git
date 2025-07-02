@@ -75,7 +75,7 @@ export default function Home() {
                   Join the Early Access List
                 </button>
               </div>
-              <div className="flex flex-wrap justify-center gap-3 pt-18 pb-4">
+              <div className="flex flex-wrap justify-center gap-3  pb-10">
                 <div className="bg-white/10 backdrop-blur-sm px-4 py-2 rounded-full text-white/90 text-sm border border-white/20 flex items-center gap-2">
                   <LinkIcon className="w-4 h-4" /> Connect Anything
                 </div>
