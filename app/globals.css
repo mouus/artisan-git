@@ -64,27 +64,40 @@
     transform: translateX(0);
   }
 }
+
+
 @keyframes slideInRight {
   0% {
     opacity: 0;
     transform: translateX(100px);
+  
   }
   100% {
     opacity: 1;
     transform: translateX(0);
   }
 }
-@scroll-timeline scroll-progress {
-  source: auto;
-  orientation: block;
+
+@keyframes slideInLeftAll {
+  0% {
+    opacity: 1;
+    transform: translateX(-300px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
 }
 
 
 .animate-slide-right {
   animation: slideInRight 2s ease-in-out forwards;
 }
+.animate-slide-left {
+  animation: slideInLeftAll 2s ease-out forwards;
+}
 .animate-slide-in-left {
-  animation: slideInLeft 0.8s ease-out forwards;
+  animation: slideInLeft 2s ease-out forwards;
 }
 
 .animate-slide-in-left-p {
