@@ -23,16 +23,7 @@ import {
 export default function Home() {
   const heroTextRef = useRef(null);
 
-  window.addEventListener('scroll', () => {
-  const el = document.querySelector('.animate-on-scroll');
-  if (!el) return;
 
-  const rect = el.getBoundingClientRect();
-  if (rect.top < window.innerHeight * 0.9) {
-    el.classList.add('animate-slide-in-left');
-    el.classList.remove('animate-slide-right');
-  }
-});
 
   
   return (
