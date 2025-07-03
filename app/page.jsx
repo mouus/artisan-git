@@ -277,7 +277,7 @@ export default function Home() {
                     </label>
                     <input
                       type="text"
-                      placeholder="Jane Doe"
+                      placeholder="Full Name"
                       className="w-full px-4 py-3 border border-slate-300 bg-white text-slate-900 rounded-lg focus:ring-2 focus:ring-slate-500"
                     />
                   </div>
@@ -287,7 +287,7 @@ export default function Home() {
                     </label>
                     <input
                       type="text"
-                      placeholder="Acme Inc."
+                      placeholder="Company Name"
                       className="w-full px-4 py-3 border border-slate-300 bg-white text-slate-900 rounded-lg focus:ring-2 focus:ring-slate-500"
                     />
                   </div>
@@ -299,7 +299,7 @@ export default function Home() {
                     </label>
                     <input
                       type="text"
-                      placeholder="Operations Manager"
+                      placeholder="Job Title"
                       className="w-full px-4 py-3 border border-slate-300 bg-white text-slate-900 rounded-lg focus:ring-2 focus:ring-slate-500"
                     />
                   </div>
@@ -309,7 +309,7 @@ export default function Home() {
                     </label>
                     <input
                       type="email"
-                      placeholder="jane.doe@acme.com"
+                      placeholder="Business Email"
                       className="w-full px-4 py-3 border border-slate-300 bg-white text-slate-900 rounded-lg focus:ring-2 focus:ring-slate-500"
                     />
                   </div>
