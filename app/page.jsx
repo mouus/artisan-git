@@ -70,29 +70,6 @@ export default function Home() {
             />
           </div>
         </div>
-        {/* Navigation */}
-        <nav className="hidden md:flex justify-end gap-18 pr-20 ">
-          {[
-            { href: "#features", label: "Features" },
-            { href: "#about", label: "About" },
-            { href: "#contact", label: "Contact" },
-          ].map((item) => (
-            <a
-              key={item.href}
-              href={item.href}
-              className="relative text-white group font-semibold text-lg tracking-wide"
-            >
-              {/* Underscore as default */}
-              <span className="block group-hover:invisible transition duration-300">
-                _____
-              </span>
-              {/* Actual text fades in on hover */}
-              <span className="absolute left-0 top-0 opacity-0 group-hover:opacity-100 group-hover:translate-y-0 translate-y-2 transition duration-300">
-                {item.label}
-              </span>
-            </a>
-          ))}
-        </nav>
       </header>
 
       {/* Hero Section */}
