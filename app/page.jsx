@@ -338,7 +338,7 @@ export default function Home() {
                 </h2>
               </div>
               <div
-                className={`flex-row md:flex gap-2`}
+                className={`grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-2 `}
               >
                 <div className="bg-slate-950 text-slate-200 p-6 rounded-2xl text-center">
                   <Factory className="w-10 h-10 text-slate-500 mx-auto mb-4" />
