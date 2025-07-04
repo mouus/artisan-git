@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import { useRef, useEffect, useState } from "react";
-
+import Typewriter from "typewriter-effect";
 import {
   LinkIcon,
   BrainCircuit,
@@ -43,7 +43,7 @@ export default function Home() {
   }, []); // Empty dependency array ensures this effect runs only once
 
   return (
-    <div>
+    <div className="relative">
       <header className="p-2 dark:bg-slate-900 z-50">
         <div className="flex justify-between items-center max-w-7xl mx-auto">
           {/* Logo */}
@@ -60,20 +60,17 @@ export default function Home() {
       </header>
 
       {/* Hero Section */}
-      <div className="relative min-h-screen">
+      <div className="min-h-screen">
         {/* Fixed Video Background */}
-        <div className="fixed inset-0 z-[-1]">
+        <div className="absolute top-0 left-0  h-[880px] z-[-1] overflow-hidden">
           <video
             autoPlay
             muted
-            loop
             playsInline
             className="w-full h-full object-cover"
           >
             <source src="/robo.mp4" type="video/mp4" />
-            Your browser does not support the video tag.
           </video>
-          {/* Optional Overlay */}
           <div className="absolute inset-0 bg-slate-950/50" />
         </div>
 
@@ -120,8 +117,8 @@ export default function Home() {
       </div>
 
       {/* Unleash Section */}
-      <div className="relative min-h-screen pb-1 pt-6 bg-white">
-        <section className="md:bg-white max-w-4xl mx-auto md:border-4 rounded-2xl border-slate-950 py-16 px-4 md:py-24">
+      <div className="relative min-h-screen   bg-white">
+        <section className="md:bg-slate-50  mx-auto   py-16 px-4 md:py-24">
           <div className="md:max-w-4xl mx-auto text-center">
             <h2 className="text-4xl md:text-5xl font-bold mb-6 text-slate-900 dark:text-white">
               Unleash the Full Power of Your Operations
@@ -213,43 +210,26 @@ export default function Home() {
       </div>
 
       {/* What you can do section */}
-      <div className="bg-white py-16 md:py-20 px-4">
-        <div className="max-w-6xl mx-auto py-12 md:py-20 px-4 text-center border-4 border-slate-950 bg-slate-950 rounded-2xl">
+      <div className="bg-white   md:py-20 px-4">
+        <div className="hidden md:flex text-slate-950 text-xl md:text-6xl h-40 w-max-6xl items-center justify-center text-center font-bold ">
+          <Typewriter
+            options={{
+              strings: [
+                "What You Can Do",
+                " Monitor production in real time and identify bottlenecks as they emerge",
+                "Automate OEE tracking, downtime events, label printing, and predictive maintenance",
+                "Orchestrate devices across your factory floor and cloud systems",
+                "Deploy edge-native workflows that keep running—even offline",
+                "Get visibility across sites, lines, and processes like never before",
+              ],
+              autoStart: true,
+              loop: true,
+            }}
+          />
+        </div>
+        <div>
           <div>
-            <p className="text-4xl md:text-6xl font-bold text-white">
-              What You Can Do
-            </p>
-          </div>
-
-          <div className="mt-14 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            <div className="flex items-start p-4 rounded-2xl bg-white hover:shadow-md transition">
-              <p className="ml-4 text-lg font-medium text-gray-800 text-left">
-                Monitor production in real time and identify bottlenecks as they
-                emerge
-              </p>
-            </div>
-            <div className="flex items-start p-4 rounded-2xl bg-white hover:shadow-md transition">
-              <p className="ml-4 text-lg font-medium text-gray-800 text-left">
-                Automate OEE tracking, downtime events, label printing, and
-                predictive maintenance
-              </p>
-            </div>
-            <div className="flex items-start p-4 rounded-2xl bg-white hover:shadow-md transition">
-              <p className="ml-4 text-lg font-medium text-gray-800 text-left">
-                Orchestrate devices across your factory floor and cloud systems
-              </p>
-            </div>
-            <div className="flex items-start p-4 rounded-2xl bg-white hover:shadow-md transition md:col-span-2 lg:col-span-1">
-              <p className="ml-4 text-lg font-medium text-gray-800 text-left">
-                Deploy edge-native workflows that keep running—even offline
-              </p>
-            </div>
-            <div className="flex items-start p-4 rounded-2xl bg-white hover:shadow-md transition col-span-1 md:col-span-2">
-              <p className="ml-4 text-lg font-medium text-gray-800 text-left">
-                Get visibility across sites, lines, and processes like never
-                before
-              </p>
-            </div>
+            <h2>What</h2>
           </div>
         </div>
       </div>
