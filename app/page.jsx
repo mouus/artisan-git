@@ -210,7 +210,7 @@ export default function Home() {
       </div>
 
       {/* What you can do section */}
-      <div className="bg-white   md:py-20 px-4">
+      <div className="bg-gradient-to-b from-slate-50 to-slate-100 md:py-20 px-4">
         <div className="hidden md:flex text-slate-950 text-xl md:text-6xl h-40 w-max-6xl items-center justify-center text-center font-bold ">
           <Typewriter
             options={{
@@ -235,21 +235,22 @@ export default function Home() {
       </div>
 
       {/* RESPONSIVE Form & Industries Section */}
-      <div className="bg-white flex flex-col lg:flex-row min-h-screen">
-        {/* Left Side (Form) */}
-        <div className="w-full lg:w-1/2 bg-slate-950 z-10 text-slate-200 lg:rounded-r-2xl p-4 md:p-8">
+      <div className="bg-white  min-h-screen">
+         
+        {/*  (Form) */}
+        <div className="w-full bg-gradient-to-b from-slate-100 to-slate-50  p-4 md:p-8">
           <div className="max-w-2xl mx-auto">
             <div className="text-center mb-12 pt-8 lg:pt-0">
-              <h2 className="text-3xl md:text-4xl text-slate-200 font-bold mb-4">
+              <h2 className="text-3xl md:text-4xl text-slate-950 font-bold mb-4">
                 Reserve Your Spot – Pilot Launch Fall 2025
               </h2>
-              <p className="text-slate-400">
+              <p className="text-slate-800">
                 We will follow up within 48 hours to confirm pilot eligibility
                 and next steps.
               </p>
             </div>
             <div className="max-w-2xl mx-auto pb-8">
-              <form className="bg-white p-6 md:p-8 rounded-2xl shadow-lg space-y-6">
+              <form className="bg-slate-200 p-6 md:p-8 rounded-2xl space-y-6">
                 <div className="grid md:grid-cols-2 gap-6">
                   <div>
                     <label className="block text-sm font-medium text-slate-700 mb-2">
@@ -327,10 +328,9 @@ export default function Home() {
             </div>
           </div>
         </div>
-
-        {/* Right Side (Industries) */}
-        <div className="w-full lg:w-1/2 flex items-center justify-center p-4 md:p-8">
-          <section>
+        {/*  (Industries) */}
+        <div className=" bg-slate-100 mx-auto">
+          <section className="flex">
             <div className="py-10 mx-auto px-4">
               <div className="text-center mb-12">
                 <h2 className="text-4xl md:text-5xl font-bold text-slate-900">
@@ -338,9 +338,7 @@ export default function Home() {
                 </h2>
               </div>
               <div
-                className={`flex flex-col gap-4 ${
-                  scrollAnimationfour ? "animate-slide-left" : "opacity-0"
-                } -z-10`}
+                className={`flex-row md:flex gap-2`}
               >
                 <div className="bg-slate-950 text-slate-200 p-6 rounded-2xl text-center">
                   <Factory className="w-10 h-10 text-slate-500 mx-auto mb-4" />
@@ -380,10 +378,12 @@ export default function Home() {
             </div>
           </section>
         </div>
+
+       
       </div>
 
       {/* Pilot Program Section */}
-      <div className="bg-white pt-10">
+      <div className="bg-white ">
         <section className="py-20 bg-slate-100 dark:bg-slate-900">
           <div className="max-w-4xl mx-auto px-4 text-center">
             <h2 className="text-4xl md:text-5xl font-bold mb-6">
