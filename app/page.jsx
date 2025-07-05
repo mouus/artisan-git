@@ -228,6 +228,8 @@ export default function Home() {
           />
         </div>
         <div>
+          {/*fixtext for mobile view without typewriter*/}
+
           {/* <div>
             <h2>What</h2>
           </div> */}
@@ -430,6 +432,7 @@ export default function Home() {
                 alt="Artisan Edge Logo"
                 width={120}
                 height={40}
+                style={{ height: "auto", width: "auto" }}
                 className="h-10 w-auto filter brightness-0 invert mb-6"
               />
               <p className="text-slate-100 mb-6">
