@@ -96,7 +96,7 @@ export default function Home() {
               amplify performance, and create real-time visibility across your
               entire operation.
             </p>
-            <div className="mb-12">
+            <div className="mb-12 pb-2">
               <button className="bg-white text-slate-900 px-10 py-5 rounded-full font-semibold text-lg hover:bg-slate-200 transition-all duration-300 transform hover:scale-105 shadow-lg">
                 Join the Early Access List
               </button>
@@ -118,7 +118,7 @@ export default function Home() {
 
       {/* Unleash Section */}
       <div className="relative bg-[#101010] min-h-screen ">
-        <section className="bg-[#101010] max-w-5xl border-b-4 border-white mx-auto   py-16 px-4 md:py-24">
+        <section className="bg-[#101010] max-w-5xl md:border-b-4 md:border-white mx-auto   py-16 px-4 md:py-24">
           <div className="md:max-w-4xl mx-auto text-center">
             <h2 className="text-4xl md:text-5xl font-bold mb-6 text-slate-100 dark:text-white">
               Unleash the Full Power of Your Operations
