@@ -43,7 +43,7 @@ export default function Home() {
   }, []); // Empty dependency array ensures this effect runs only once
 
   return (
-    <div className="relative bg-[#101010]">
+    <div className="relative bg-[#101010] overflow-hidden">
       <header className="p-2 dark:bg-slate-900 z-50">
         <div className="flex justify-between items-center max-w-7xl mx-auto">
           {/* Logo */}
@@ -137,7 +137,7 @@ export default function Home() {
         </section>
 
         {/* REFACTORED TIMELINE: No more duplicate code. Uses responsive classes. */}
-        <div className="relative max-w-4xl mx-auto mt-16 px-4">
+        <div className="relative max-w-4xl mx-auto mt-16 px-4 ">
           {/* Vertical Line for Desktop */}
           <div className="absolute left-1/2 transform -translate-x-1/2 h-full w-1 bg-slate-50 dark:bg-slate-100 hidden md:block"></div>
 
