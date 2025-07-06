@@ -82,7 +82,7 @@ export default function Home() {
             </div>
             <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-6 leading-tight opacity-0 animate-slide-in-left animation-delay-300">
               Smarter Automation.
-              <span className="block text-slate-300">
+              <span className="block text-blue-300">
                 Connected Operations.
               </span>
               <span className="block text-white">Real Results.</span>
@@ -120,7 +120,7 @@ export default function Home() {
       <div className="relative bg-[#101010] min-h-screen ">
         <section className="bg-[#101010] max-w-5xl md:border-b-4 md:border-white mx-auto   py-16 px-4 md:py-24">
           <div className="md:max-w-4xl mx-auto text-center">
-            <h2 className="text-4xl md:text-5xl font-bold mb-6 text-slate-100 dark:text-white">
+            <h2 className="text-4xl md:text-5xl font-bold mb-6 text-blue-400 dark:text-white">
               Unleash the Full Power of Your Operations
             </h2>
             <p className="text-lg md:text-xl text-slate-300 dark:text-slate-200 leading-relaxed">
@@ -149,7 +149,7 @@ export default function Home() {
               }`}
             >
               <div className="p-6  dark:bg-slate-800 rounded-xl shadow-md border md:border-0">
-                <h3 className="text-xl font-bold mb-2 text-white">
+                <h3 className="text-xl font-bold mb-2 text-blue-400">
                   Connect Anything
                 </h3>
                 <p className="text-slate-100 dark:text-slate-100">
@@ -171,7 +171,7 @@ export default function Home() {
               }`}
             >
               <div className="p-6  dark:bg-slate-800 rounded-xl shadow-md border md:border-0">
-                <h3 className="text-xl font-bold mb-2 text-white">
+                <h3 className="text-xl font-bold mb-2 text-blue-400">
                   Visual Automation
                 </h3>
                 <p className="text-slate-100 dark:text-slate-400">
@@ -193,7 +193,7 @@ export default function Home() {
               }`}
             >
               <div className="p-6  dark:bg-slate-800 rounded-xl shadow-md border md:border-0">
-                <h3 className="text-xl font-bold mb-2 text-white">
+                <h3 className="text-xl font-bold mb-2 text-blue-400">
                   Secure by Design
                 </h3>
                 <p className="text-slate-100 dark:text-slate-400">
@@ -211,7 +211,7 @@ export default function Home() {
 
       {/* What you can do section */}
       <div className="bg-[#050505] md:py-20 px-4">
-        <div className="hidden md:flex text-slate-200 text-xl md:text-6xl h-40 w-max-6xl items-center justify-center text-center font-bold ">
+        <div className="hidden md:flex text-blue-400 text-xl md:text-6xl h-40 w-max-6xl items-center justify-center text-center font-bold ">
           <Typewriter
             options={{
               strings: [
@@ -243,7 +243,7 @@ export default function Home() {
         <div className="w-full bg-[#050505] p-4 md:p-8">
           <div className="max-w-2xl mx-auto">
             <div className="text-center mb-12 pt-8 lg:pt-0">
-              <h2 className="text-3xl md:text-4xl text-slate-200 font-bold mb-4">
+              <h2 className="text-3xl md:text-4xl text-blue-400 font-bold mb-4">
                 Reserve Your Spot – Pilot Launch Fall 2025
               </h2>
               <p className="text-slate-400">
@@ -287,7 +287,7 @@ export default function Home() {
                     />
                   </div>
                   <div>
-                    <label className="block text-sm font-medium text-slate-700 mb-2">
+                    <label className="block text-sm font-medium text-slate-100 mb-2">
                       Business Email
                     </label>
                     <input
@@ -335,7 +335,7 @@ export default function Home() {
           <section className="flex">
             <div className="py-10 mx-auto px-4">
               <div className="text-center mb-12">
-                <h2 className="text-4xl md:text-5xl font-bold text-slate-50">
+                <h2 className="text-4xl md:text-5xl font-bold text-blue-400">
                   Industries We Serve
                 </h2>
               </div>
@@ -388,7 +388,7 @@ export default function Home() {
       <div className="bg-white ">
         <section className="py-20 bg-[#050505] dark:bg-slate-900">
           <div className="max-w-4xl mx-auto px-4 text-center">
-            <h2 className="text-4xl text-slate-50 md:text-5xl font-bold mb-6">
+            <h2 className="text-4xl text-blue-400 md:text-5xl font-bold mb-6">
               Fall 2025 Pilot Program
             </h2>
             <p className="text-xl text-slate-200 dark:text-slate-300 mb-8">
@@ -415,7 +415,7 @@ export default function Home() {
             <p className="text-xl text-slate-400 dark:text-slate-300 mb-8">
               This is your chance to lead the next industrial revolution.
             </p>
-            <button className="bg-white text-slate-950 dark:bg-white dark:text-slate-900 px-10 py-5 rounded-full font-semibold text-lg hover:bg-slate-800 dark:hover:bg-slate-200 transition-all duration-300 transform hover:scale-105 shadow-lg">
+            <button className="bg-white text-slate-950 dark:bg-white hover:text-slate-100 px-10 py-5 rounded-full font-semibold text-lg hover:bg-slate-800 dark:hover:bg-slate-200 transition-all duration-300 transform hover:scale-105 shadow-lg">
               Apply for Early Access Now
             </button>
           </div>
@@ -423,7 +423,7 @@ export default function Home() {
       </div>
 
       {/* Footer */}
-      <footer className="bg-[#060606] py-12 text-slate-100">
+      <footer className="bg-[#090909] py-12 text-slate-100">
         <div className="max-w-7xl mx-auto px-4">
           <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-12">
             <div className="md:col-span-2">
