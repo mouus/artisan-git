@@ -243,7 +243,7 @@ export default function Home() {
         <div className="w-full bg-[#050505] p-4 md:p-8">
           <div className="max-w-2xl mx-auto">
             <div className="text-center mb-12 pt-8 lg:pt-0">
-              <h2 className="text-3xl md:text-4xl text-blue-400 font-bold mb-4">
+              <h2 className="text-3xl md:text-4xl text-slate-50 font-bold mb-4">
                 Reserve Your Spot – Pilot Launch Fall 2025
               </h2>
               <p className="text-slate-400">
@@ -335,7 +335,7 @@ export default function Home() {
           <section className="flex">
             <div className="py-10 mx-auto px-4">
               <div className="text-center mb-12">
-                <h2 className="text-4xl md:text-5xl font-bold text-blue-400">
+                <h2 className="text-4xl md:text-5xl font-bold text-slate-100">
                   Industries We Serve
                 </h2>
               </div>
@@ -388,7 +388,7 @@ export default function Home() {
       <div className="bg-white ">
         <section className="py-20 bg-[#050505] dark:bg-slate-900">
           <div className="max-w-4xl mx-auto px-4 text-center">
-            <h2 className="text-4xl text-blue-400 md:text-5xl font-bold mb-6">
+            <h2 className="text-4xl text-slate-100 md:text-5xl font-bold mb-6">
               Fall 2025 Pilot Program
             </h2>
             <p className="text-xl text-slate-200 dark:text-slate-300 mb-8">
@@ -432,7 +432,7 @@ export default function Home() {
                 alt="Artisan Edge Logo"
                 width={120}
                 height={40}
-                style={{ height: "auto", width: "auto" }}
+                style={{width: "auto", height: "auto"}}
                 className="h-10 w-auto filter brightness-0 invert mb-6"
               />
               <p className="text-slate-100 mb-6">
