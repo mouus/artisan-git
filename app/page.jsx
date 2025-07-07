@@ -295,7 +295,7 @@ export default function Home() {
 
       {/* What you can do section */}
       <div className="bg-[#101010] py-20 px-4">
-        <div className="text-blue-400 text-2xl md:text-5xl h-40 max-w-6xl mx-auto flex items-center justify-center text-center font-bold">
+        <div className="text-white text-2xl md:text-5xl h-40 max-w-6xl mx-auto flex items-center justify-center text-center font-bold">
           <Typewriter
             options={{
               strings: [
