@@ -70,7 +70,7 @@ export default function Home() {
         </div>
 
         {/* Hero Content & Form Container */}
-        <div className="relative  z-10 w-full max-w-7xl mx-auto px-4 mt-72 flex flex-col md:flex-row items-center justify-between gap-8">
+        <div className="relative  z-10 w-full max-w-7xl mx-auto px-4 mt-72 flex flex-col md:flex-row  justify-between gap-8">
           {/* Left Side: Text Content */}
           <div className="md:w-3/5 lg:w-1/2 text-center md:text-left">
             <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-6 leading-tight opacity-0 animate-slide-in-left animation-delay-300">
@@ -111,7 +111,7 @@ export default function Home() {
           </div>
 
           {/* Right Side: Form Section */}
-          <div className="w-full md:w-2/5 lg:w-1/2 max-w-md mx-auto">
+          <div className="w-full md:w-2/5 lg:w-1/2 md:mt-16 max-w-md mx-auto">
             <form className="bg-white/95 backdrop-blur-lg p-6 rounded-2xl space-y-4 border border-slate-300 shadow-2xl">
               <div className="text-center mb-4">
                 <h2 className="text-2xl md:text-3xl text-blue-950 font-bold mb-1">
