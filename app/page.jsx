@@ -111,7 +111,7 @@ export default function Home() {
           </div>
 
           {/* Right Side: Form Section */}
-          <div className="w-full md:w-2/5 lg:w-1/2 md:mt-16 max-w-md mx-auto">
+          <div className="w-full md:w-2/5 lg:w-1/2 md:mt-11 max-w-md mx-auto">
             <form className="bg-white/95 backdrop-blur-lg p-6 rounded-2xl space-y-4 border border-slate-300 shadow-2xl">
               <div className="text-center mb-4">
                 <h2 className="text-2xl md:text-3xl text-blue-950 font-bold mb-1">
