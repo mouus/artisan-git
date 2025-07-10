@@ -19,6 +19,14 @@ export default function Home() {
   const [scrollAnimationthree, setScrollAnimationthree] = useState(false);
   const [scrollAnimationfour, setScrollAnimationfour] = useState(false);
 
+  const companyLogos = [
+    "/aws.png",
+    "/nvidia.png",
+    "/peach.png",
+    "/gpk.jpg",
+    "/rogue.png",
+  ];
+
   useEffect(() => {
     const handleScroll = () => {
       const currentScrollY = window.scrollY;
@@ -70,22 +78,21 @@ export default function Home() {
         </div>
 
         {/* Hero Content & Form Container */}
-        <div className="relative  z-10 w-full max-w-7xl mx-auto px-4 mt-72 flex flex-col md:flex-row  justify-between gap-8">
+        <div className="relative  z-10 w-full max-w-7xl mx-auto px-4 mt-62 md:mt-72 flex flex-col md:flex-row  justify-between gap-8">
           {/* Left Side: Text Content */}
           <div className="md:w-3/5 lg:w-1/2 text-center md:text-left">
-            <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-6 leading-tight opacity-0 animate-slide-in-left animation-delay-300">
+            <h1 className="text-5xl md:text-5xl lg:text-7xl font-bold text-white mb-6 leading-tight opacity-0 animate-slide-in-left animation-delay-300">
               Smarter Automation.
-              <span className="block text-blue-400">
-                Connected Operations.
-              </span>
+              <span className="block text-blue-400">Connected Operations.</span>
               <span className="block text-white">Real Results.</span>
             </h1>
             <p
               style={{ animationDelay: "1s" }}
               className="text-lg md:text-xl text-white/90 mb-4 max-w-2xl mx-auto md:mx-0 opacity-0 animate-slide-in-left-p animation-delay-600"
             >
-              Artisan Edge is not just an automation platform—it's the future of
-              intelligent industrial operations. Designed to eliminate silos,
+              Artisan Edge is the future of intelligent industrial operations.
+              The Industiral Data Ops Platform for Industry 4.0. That transforms
+              raw data into intelligent action. Designed to eliminate silos,
               amplify performance, and create real-time visibility across your
               entire operation.
             </p>
@@ -118,7 +125,8 @@ export default function Home() {
                   Reserve Your Spot
                 </h2>
                 <p className="text-slate-600 text-sm">
-                  Join the pilot launch in Fall 2025. We'll follow up within 48 hours.
+                  Join the pilot launch in Fall 2025. We'll follow up within 48
+                  hours.
                 </p>
               </div>
               <div className="grid md:grid-cols-2 gap-4">
@@ -201,7 +209,7 @@ export default function Home() {
 
       {/* Unleash Section */}
       <div className="relative bg-[url(/artisan.jpg)] bg-no-repeat bg-cover bg-[#101010] py-16">
-          <div className="absolute inset-0  bg-black/80" />
+        <div className="absolute inset-0  bg-black/80" />
 
         <section className="max-w-5xl mx-auto py-16 px-4 md:py-24 z-30  relative">
           <div className="md:max-w-4xl mx-auto text-center">
@@ -313,156 +321,195 @@ export default function Home() {
             }}
           />
         </div>
-      </div>
-
-
-    <div className="relative bg-[url(/industries.jpg)] bg-cover bg-center bg-no-repeat py-20">
-          <div className="absolute inset-0 backdrop-blur-sm bg-black/90" />
-
-        {/* Industries Section */}
-      <div className=" relative  py-20">
-        <section className="max-w-7xl mx-auto px-4">
-          <div className="text-center mb-12">
-            <h2 className="text-4xl md:text-5xl font-bold text-white">
-              Industries We Serve
-            </h2>
-          </div>
-          <div
-            className={`grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8`}
-          >
-            <div className="bg-slate-900/50 border border-slate-800 text-slate-200 p-6 rounded-2xl text-center">
-              <Factory className="w-10 h-10 text-blue-400 mx-auto mb-4" />
-              <h3 className="text-xl font-bold mb-3 text-white">Manufacturing</h3>
-              <p className="text-slate-300 text-sm">
-                Connect OT and IT, optimize production, and integrate data
-                across equipment.
-              </p>
-            </div>
-            <div className="bg-slate-900/50 border border-slate-800 text-slate-200 p-6 rounded-2xl text-center">
-              <Warehouse className="w-10 h-10 text-blue-400 mx-auto mb-4" />
-              <h3 className="text-xl font-bold mb-3 text-white">
-                Logistics & Warehousing
-              </h3>
-              <p className="text-slate-300 text-sm">
-                Automate picking, routing, label printing, and inventory
-                syncing.
-              </p>
-            </div>
-            <div className="bg-slate-900/50 border border-slate-800 text-slate-200 p-6 rounded-2xl text-center">
-              <UtensilsCrossed className="w-10 h-10 text-blue-400 mx-auto mb-4" />
-              <h3 className="text-xl font-bold mb-3 text-white">Food Service</h3>
-              <p className="text-slate-300 text-sm">
-                Link POS to automated prep stations, track cook times, and
-                reduce waste.
-              </p>
-            </div>
-            <div className="bg-slate-900/50 border border-slate-800 text-slate-200 p-6 rounded-2xl text-center">
-              <Wrench className="w-10 h-10 text-blue-400 mx-auto mb-4" />
-              <h3 className="text-xl font-bold mb-3 text-white">OEM & Integrators</h3>
-              <p className="text-slate-300 text-sm">
-                Embed Artisan Edge with white-labeled dashboards and
-                deployment templates.
-              </p>
-            </div>
-          </div>
-          <div className="text-white text-lg font-bold text-center p-6 mt-4 rounded-2xl">
-            <p>... and more!</p>
-          </div>
-        </section>
-      </div>
-
-
-      {/* Pilot Program Section */}
-      <div className="relative">
-        <section className="py-20">
-          <div className="max-w-4xl mx-auto px-4 text-center">
-            <h2 className="text-4xl text-white md:text-5xl font-bold mb-6">
-              Fall 2025 Pilot Program
-            </h2>
-            <p className="text-xl text-slate-300 mb-8">
-              We're offering a limited early access program for select partners
-              and forward-leaning industrial operators.
-            </p>
-            <div className="bg-slate-900/50 backdrop-blur-sm rounded-2xl p-8 mb-8 border border-slate-700">
-              <h3 className="text-2xl font-bold mb-6 text-white">What You Get:</h3>
-              <div className="grid md:grid-cols-3 gap-8 md:gap-6 text-slate-300">
-                <div className="flex flex-col items-center">
-                  <div className="text-3xl mb-2">⏱️</div>
-                  <p>6–8 week pilot (at no cost)</p>
+        <div>
+          {/* Trusted by section */}
+          <div className="max-w-6xl mx-auto mt-16">
+            <h3 className="text-center text-gray-400 text-lg mb-8">
+              Trusted, Backed, or Supported By
+            </h3>
+            <div className="flex flex-wrap justify-center items-center gap-8 md:gap-12">
+              {companyLogos.map((logo, index) => (
+                <div key={index} className="p-2  rounded-full">
+                  <img
+                    src={logo}
+                    alt={`Company Logo ${index + 1}`}
+                    className="h-28 w-28 md:h-28 md:w-28 rounded-full bg-white object-contain"
+                  />
                 </div>
-                <div className="flex flex-col items-center">
-                  <div className="text-3xl mb-2">🤝</div>
-                  <p>Hands-on onboarding and solution design support</p>
-                </div>
-                <div className="flex flex-col items-center">
-                  <div className="text-3xl mb-2">🎯</div>
-                  <p>VIP influence on product roadmap and feature feedback</p>
-                </div>
-              </div>
+              ))}
             </div>
-            <p className="text-xl text-slate-400 mb-8">
-              This is your chance to lead the next industrial revolution.
-            </p>
-            <button className="bg-blue-600 text-white px-10 py-5 rounded-full font-semibold text-lg hover:bg-blue-700 transition-all duration-300 transform hover:scale-105 shadow-lg">
-              Apply for Early Access Now
-            </button>
-          </div>
-        </section>
-      </div>
-    </div>
-
-      {/* Footer */}
-      <footer className=" py-12 text-slate-300">
-        <div className="max-w-7xl mx-auto px-4">
-          <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-12">
-            <div className="md:col-span-2">
-              <Image
-                src="/logo.svg"
-                alt="Artisan Edge Logo"
-                width={120}
-                height={40}
-                className="h-auto w-32 filter brightness-0 invert mb-6"
-              />
-              <p className="text-slate-400 mb-6">
-                Artisan Technologies builds intelligent automation software that
-                connects machines, people, and data. Our flagship platform,
-                Artisan Edge, helps you modernize industrial operations with
-                speed, clarity, and impact.
-              </p>
-              <div className="space-y-2 text-slate-400">
-                <p>📧 sales@artisantec.io</p>
-                <p>🌐 www.artisantec.io</p>
-                <p>📞 (419) 481-6976</p>
-              </div>
-            </div>
-            <div>
-              <h3 className="text-lg font-semibold text-white mb-4">
-                Security
-              </h3>
-              <ul className="space-y-2 text-slate-400 text-sm">
-                <li>End-to-end TLS encryption</li>
-                <li>Role-based access controls</li>
-                <li>Offline-first execution</li>
-                <li>Audit logging & compliance</li>
-              </ul>
-            </div>
-            <div>
-              <h3 className="text-lg font-semibold text-white mb-4">
-                Solutions
-              </h3>
-              <ul className="space-y-2 text-slate-400 text-sm">
-                <li>Custom Solutions</li>
-                <li>Enterprise Deployment</li>
-                <li>Integration Services</li>
-                <li>Support & Training</li>
-              </ul>
-            </div>
-          </div>
-          <div className="border-t border-slate-800 pt-8 text-center text-slate-500">
-            <p>&copy; 2025 Artisan Technologies. All rights reserved.</p>
           </div>
         </div>
-      </footer>
+      </div>
+
+      <div className="relative bg-[url(/industries.jpg)] bg-cover bg-center bg-no-repeat py-20">
+        <div className="absolute inset-0 backdrop-blur-sm bg-black/90" />
+
+        {/* Industries Section */}
+        <div className=" relative  py-20">
+          <section className="max-w-7xl mx-auto px-4">
+            <div className="text-center mb-12">
+              <h2 className="text-4xl md:text-5xl font-bold text-white">
+                Industries We Serve
+              </h2>
+            </div>
+            <div
+              className={`grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8`}
+            >
+              <div className="bg-slate-900/50 border border-slate-800 text-slate-200 p-6 rounded-2xl text-center">
+                <Factory className="w-10 h-10 text-blue-400 mx-auto mb-4" />
+                <h3 className="text-xl font-bold mb-3 text-white">
+                  Manufacturing
+                </h3>
+                <p className="text-slate-300 text-sm">
+                  Connect OT and IT, optimize production, and integrate data
+                  across equipment.
+                </p>
+              </div>
+              <div className="bg-slate-900/50 border border-slate-800 text-slate-200 p-6 rounded-2xl text-center">
+                <Warehouse className="w-10 h-10 text-blue-400 mx-auto mb-4" />
+                <h3 className="text-xl font-bold mb-3 text-white">
+                  Logistics & Warehousing
+                </h3>
+                <p className="text-slate-300 text-sm">
+                  Automate picking, routing, label printing, and inventory
+                  syncing.
+                </p>
+              </div>
+              <div className="bg-slate-900/50 border border-slate-800 text-slate-200 p-6 rounded-2xl text-center">
+                <UtensilsCrossed className="w-10 h-10 text-blue-400 mx-auto mb-4" />
+                <h3 className="text-xl font-bold mb-3 text-white">
+                  Food Service
+                </h3>
+                <p className="text-slate-300 text-sm">
+                  Link POS to automated prep stations, track cook times, and
+                  reduce waste.
+                </p>
+              </div>
+              <div className="bg-slate-900/50 border border-slate-800 text-slate-200 p-6 rounded-2xl text-center">
+                <Wrench className="w-10 h-10 text-blue-400 mx-auto mb-4" />
+                <h3 className="text-xl font-bold mb-3 text-white">
+                  OEM & Integrators
+                </h3>
+                <p className="text-slate-300 text-sm">
+                  Embed Artisan Edge with white-labeled dashboards and
+                  deployment templates.
+                </p>
+              </div>
+            </div>
+            <div className="text-white text-lg font-bold text-center p-6 mt-4 rounded-2xl">
+              <p>... and more!</p>
+            </div>
+          </section>
+        </div>
+
+        {/* Pilot Program Section */}
+        <div className="relative">
+          <section className="py-20">
+            <div className="max-w-4xl mx-auto px-4 text-center">
+              <h2 className="text-4xl text-white md:text-5xl font-bold mb-6">
+                Fall 2025 Pilot Program
+              </h2>
+              <p className="text-xl text-slate-300 mb-8">
+                We're offering a limited early access program for select
+                partners and forward-leaning industrial operators.
+              </p>
+              <div className="bg-slate-900/50 backdrop-blur-sm rounded-2xl p-8 mb-8 border border-slate-700">
+                <h3 className="text-2xl font-bold mb-6 text-white">
+                  What You Get:
+                </h3>
+                <div className="grid md:grid-cols-3 gap-8 md:gap-6 text-slate-300">
+                  <div className="flex flex-col items-center">
+                    <div className="text-3xl mb-2">⏱️</div>
+                    <p>6–8 week pilot (at no cost)</p>
+                  </div>
+                  <div className="flex flex-col items-center">
+                    <div className="text-3xl mb-2">🤝</div>
+                    <p>Hands-on onboarding and solution design support</p>
+                  </div>
+                  <div className="flex flex-col items-center">
+                    <div className="text-3xl mb-2">🎯</div>
+                    <p>VIP influence on product roadmap and feature feedback</p>
+                  </div>
+                </div>
+              </div>
+              <p className="text-xl text-slate-400 mb-8">
+                This is your chance to lead the next industrial revolution.
+              </p>
+              <button className="bg-blue-600 text-white px-10 py-5 rounded-full font-semibold text-lg hover:bg-blue-700 transition-all duration-300 transform hover:scale-105 shadow-lg">
+                Apply for Early Access Now
+              </button>
+            </div>
+          </section>
+        </div>
+      </div>
+{/* Footer */}
+    <footer className="bg-black py-12 text-slate-300">
+      <div className="max-w-7xl mx-auto px-4">
+        {/* Main footer content grid */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
+          {/* Company Info */}
+          <div className="lg:col-span-1">
+            <Image
+              src="/logo.svg"
+              alt="Artisan Edge Logo"
+              width={120}
+              height={40}
+              className="h-auto w-32 filter brightness-0 invert mb-6"
+            />
+            <p className="text-slate-400 mb-6 text-sm">
+              Artisan Technologies builds intelligent automation software that connects machines, people, and data.
+            </p>
+            <div className="space-y-2 text-slate-400 text-sm">
+              <p>📧 sales@artisantec.io</p>
+              <p>🌐 www.artisantec.io</p>
+              <p>📞 (419) 481-6976</p>
+            </div>
+          </div>
+
+          {/* University Affiliations ✨ NEW SECTION */}
+          <div>
+            <h3 className="text-lg font-semibold text-white mb-4">
+              From Experts at
+            </h3>
+            <p className="text-slate-400 text-sm leading-relaxed">
+              Our platform is built by industry experts from leading institutions like Rice University, Boston College, University of Toledo, University of Pittsburgh, University of Houston, University of Texas-Dallas, and Arizona State University.
+            </p>
+          </div>
+
+          {/* Security */}
+          <div>
+            <h3 className="text-lg font-semibold text-white mb-4">
+              Security
+            </h3>
+            <ul className="space-y-2 text-slate-400 text-sm">
+              <li>End-to-end TLS encryption</li>
+              <li>Role-based access controls</li>
+              <li>Offline-first execution</li>
+              <li>Audit logging & compliance</li>
+            </ul>
+          </div>
+
+          {/* Solutions */}
+          <div>
+            <h3 className="text-lg font-semibold text-white mb-4">
+              Solutions
+            </h3>
+            <ul className="space-y-2 text-slate-400 text-sm">
+              <li>Custom Solutions</li>
+              <li>Enterprise Deployment</li>
+              <li>Integration Services</li>
+              <li>Support & Training</li>
+            </ul>
+          </div>
+        </div>
+
+        {/* Copyright */}
+        <div className="border-t border-slate-800 pt-8 text-center text-slate-500">
+          <p>&copy; 2025 Artisan Technologies. All rights reserved.</p>
+        </div>
+      </div>
+    </footer>
     </div>
   );
 }
