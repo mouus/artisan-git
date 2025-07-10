@@ -36,6 +36,8 @@ export default function Home() {
   ];
 
   const companyLogos = [
+    "/apple.png",
+    "/motion.png",
     "/aws.png",
     "/nvidia.png",
     "/peach.png",
@@ -543,7 +545,7 @@ export default function Home() {
             {/* Column 1: Logo + About */}
             <div>
               <Image
-                src="/logo.svg"
+                src="/logo-1.svg"
                 alt="Artisan Edge Logo"
                 width={140}
                 height={40}
