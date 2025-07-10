@@ -100,7 +100,7 @@
 .marquee {
   display: flex;
   gap: 2rem;
-  animation: scroll-left-to-right 20s linear infinite;
+  animation: scroll-left-to-right 40s linear infinite;
   white-space: nowrap;
 }
 
