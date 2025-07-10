@@ -24,38 +24,10 @@ export default function Home() {
 
   const [openKey, setOpenKey] = useState(null);
 
-  const items = [
-    {
-      key: "uni",
-      icon: <School className="w-7 h-7 text-white" />,
-      title: "From Experts at",
-      logos: [
-        "/ru.png",
-        "/bu.png",
-        "/asu.png",
-        "/up.png",
-        "/uh.png",
-        "/utd.png",
-        "/ut.png",
-      ],
-    },
-    {
-      key: "security",
-      icon: <Shield className="w-7 h-7 text-white" />,
-      title: "Security",
-      content: `• End-to-end TLS encryption\n• Role-based access controls\n• Offline-first execution\n• Audit logging & compliance`,
-    },
-    {
-      key: "solutions",
-      icon: <Settings className="w-7 h-7 text-white" />,
-      title: "Solutions",
-      content: `• Custom Solutions\n• Enterprise Deployment\n• Integration Services\n• Support & Training`,
-    },
-  ];
 
   const logos = [
     "/ru.png",
-    "/bu.png",
+    "/bc.png",
     "/asu.png",
     "/up.png",
     "/uh.png",
