@@ -27,19 +27,27 @@ export default function Home() {
   const items = [
     {
       key: "uni",
-      icon: <School className="w-8 h-8 text-white" />,
+      icon: <School className="w-7 h-7 text-white" />,
       title: "From Experts at",
-      content: `Our platform is built by industry experts from leading institutions like Rice University, Boston College, University of Toledo, University of Pittsburgh, University of Houston, University of Texas-Dallas, and Arizona State University.`,
+      logos: [
+        "/ru.png",
+        "/bu.png",
+        "/asu.png",
+        "/up.png",
+        "/uh.png",
+        "/utd.png",
+        "/ut.png",
+      ],
     },
     {
       key: "security",
-      icon: <Shield className="w-8 h-8 text-white" />,
+      icon: <Shield className="w-7 h-7 text-white" />,
       title: "Security",
       content: `• End-to-end TLS encryption\n• Role-based access controls\n• Offline-first execution\n• Audit logging & compliance`,
     },
     {
       key: "solutions",
-      icon: <Settings className="w-8 h-8 text-white" />,
+      icon: <Settings className="w-7 h-7 text-white" />,
       title: "Solutions",
       content: `• Custom Solutions\n• Enterprise Deployment\n• Integration Services\n• Support & Training`,
     },
@@ -430,31 +438,55 @@ export default function Home() {
         </div>
 
         {/* Information Section */}
-         <div className="flex flex-wrap justify-center gap-8 p-6">
-      {items.map(({ key, icon, title, content }) => (
-        <div
-          key={key}
-          className="relative flex flex-col items-center text-center"
-        >
-          <button
-            onClick={() => setOpenKey(openKey === key ? null : key)}
-            onMouseEnter={() => setOpenKey(key)}
-            onMouseLeave={() => setOpenKey(null)}
-            className="p-4 bg-white/10 backdrop-blur-sm shadow-lg rounded-full hover:scale-110 transition-transform"
-          >
-            {icon}
-          </button>
-          <span className="mt-2 text-xs text-slate-400 md:hidden">Tap to view</span>
-
-          {openKey === key && (
-            <div className="absolute top-16 z-10 w-72 p-4 bg-white border shadow-xl rounded-xl transition-all duration-200">
-              <h3 className="font-semibold text-gray-800 mb-2">{title}</h3>
-              <p className="text-sm whitespace-pre-line text-gray-600">{content}</p>
-            </div>
-          )}
-        </div>
-      ))}
+     <div className="flex flex-col md:flex-row items-start md:items-center gap-4 md:gap-12 p-6 w-full">
+      {/* Sidebar Icons */}
+      <div className="flex md:flex-col gap-6 md:gap-8">
+  {items.map(({ key, icon }) => (
+    <div key={key} className="flex flex-col items-center">
+      <button
+        onClick={() => setOpenKey(openKey === key ? null : key)}
+        className="p-3 bg-white/10 backdrop-blur-sm rounded-full shadow hover:scale-110 transition-transform"
+      >
+        {icon}
+      </button>
+      <span className="mt-2 text-xs text-slate-400">Tap to view</span>
     </div>
+  ))}
+</div>
+
+      {/* Modal Display */}
+      <div className="flex-1 w-full max-w-3xl relative min-h-[220px]">
+        {items.map(({ key, title, content, logos }) =>
+          openKey === key ? (
+            <div
+              key={key}
+              className="absolute left-0 top-0 w-full bg-white rounded-xl border shadow-xl p-6"
+            >
+              <h3 className="text-xl font-semibold text-gray-800 mb-4">
+                {title}
+              </h3>
+              {logos ? (
+                <div className="grid grid-cols-2 sm:grid-cols-3 gap-4">
+                  {logos.map((src, i) => (
+                    <Image
+                      key={i}
+                      src={src}
+                      alt="University Logo"
+                      width={100}
+                      height={50}
+                      className="object-contain h-12 w-auto grayscale hover:grayscale-0 transition"
+                    />
+                  ))}
+                </div>
+              ) : (
+                <p className="text-sm whitespace-pre-line text-gray-600">{content}</p>
+              )}
+            </div>
+          ) : null
+        )}
+      </div>
+    </div>
+
         {/* Pilot Program Section */}
         <div className="relative">
           <section className="py-20">
