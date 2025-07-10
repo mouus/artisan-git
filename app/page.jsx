@@ -73,7 +73,7 @@ export default function Home() {
               alt="Artisan Edge Logo"
               width={100}
               height={100}
-              className="h-16 md:h-32 w-auto filter"
+              className="h-16 md:h-42 md:-ml-18 w-auto filter"
             />
           </div>
         </div>
@@ -547,9 +547,9 @@ export default function Home() {
               <Image
                 src="/logo.svg"
                 alt="Artisan Edge Logo"
-                width={140}
+                width={40}
                 height={40}
-                className="h-auto w-36 filter brightness-0 invert mb-6"
+                className="h-auto w-36 md:-ml-11 filter brightness-0 invert mb-6"
               />
               <p className="text-slate-400 text-sm leading-relaxed">
                 Artisan Technologies builds intelligent automation software that
