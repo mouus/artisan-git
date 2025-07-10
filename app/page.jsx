@@ -69,7 +69,7 @@ export default function Home() {
           {/* Logo */}
           <div className="flex items-center">
             <Image
-              src="/logo-1.svg"
+              src="/logo.svg"
               alt="Artisan Edge Logo"
               width={100}
               height={100}
@@ -545,7 +545,7 @@ export default function Home() {
             {/* Column 1: Logo + About */}
             <div>
               <Image
-                src="/logo-1.svg"
+                src="/logo.svg"
                 alt="Artisan Edge Logo"
                 width={140}
                 height={40}
