@@ -351,7 +351,7 @@ export default function Home() {
                   <img
                     src={logo}
                     alt={`Company Logo ${index + 1}`}
-                    className="h-28 w-28 md:h-28 md:w-28 rounded-full bg-white object-contain"
+                    className="h-28 w-28 md:h-28 md:w-28 rounded-full py-2 px-2 bg-white object-contain"
                   />
                 </div>
               ))}
