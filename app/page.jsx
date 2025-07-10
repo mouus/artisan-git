@@ -449,7 +449,7 @@ export default function Home() {
       >
         {icon}
       </button>
-      <span className="mt-2 text-xs text-slate-400">Tap to view</span>
+      <span className="mt-2 z-20 text-xs text-slate-400 text-center">Tap or hover to view</span>
     </div>
   ))}
 </div>
