@@ -43,6 +43,9 @@ export default function Home() {
     "/peach.png",
     "/gpk.jpg",
     "/rogue.png",
+    "/honeywell.png",
+    "/disney.png",
+    "/cdw.png",
   ];
 
   useEffect(() => {
@@ -67,13 +70,13 @@ export default function Home() {
       <header className="z-10 absolute top-0 left-0 w-full py-4">
         <div className="flex justify-between items-center max-w-7xl mx-auto">
           {/* Logo */}
-          <div className="flex items-center">
+          <div className="flex  mx-auto md:mx-0">
             <Image
               src="/logo.svg"
               alt="Artisan Edge Logo"
               width={100}
               height={100}
-              className="h-16 md:h-42 md:-ml-18 w-auto filter"
+              className="h-42  md:h-42   md:-ml-18 w-auto filter"
             />
           </div>
         </div>
@@ -137,7 +140,7 @@ export default function Home() {
 
           {/* Right Side: Form Section */}
           <div className="w-full md:w-2/5 lg:w-1/2 md:mt-11 max-w-md mx-auto">
-            <form className="bg-white/95 backdrop-blur-lg p-6 rounded-2xl space-y-4 border border-slate-300 shadow-2xl">
+            <form id="form" className=" bg-white/95 backdrop-blur-lg p-6 rounded-2xl space-y-4 border border-slate-300 shadow-2xl">
               <div className="text-center mb-4">
                 <h2 className="text-2xl md:text-3xl text-blue-950 font-bold mb-1">
                   Reserve Your Spot
@@ -421,38 +424,7 @@ export default function Home() {
           </section>
         </div>
 
-        {/* Information Solution Section */}
-        <section className="relative  py-12 px-4 md:px-8 lg:px-16">
-          <div className="max-w-4xl mx-auto text-center">
-            <h2 className="text-2xl md:text-3xl font-semibold text-slate-50 mb-10">
-              Solutions
-            </h2>
-
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 text-slate-50 text-base md:text-lg mb-10">
-              <div className="bg-slate-900/50 shadow-sm  p-4 border border-slate-800 rounded-2xl">
-                Integration Services
-              </div>
-              <div className="bg-slate-900/50 shadow-sm  p-4 border border-slate-800 rounded-2xl ">
-                Custom Solutions
-              </div>
-              <div className="bg-slate-900/50 shadow-sm  p-4 border border-slate-800  rounded-2xl">
-                Enterprise Deployment
-              </div>
-              <div className="bg-slate-900/50 shadow-sm  p-4 border border-slate-800 rounded-2xl ">
-                Support & Training
-              </div>
-            </div>
-
-            <a
-              href="https://www.artisantec.io"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-block bg-blue-600 hover:bg-blue-700 text-white font-medium py-2 px-6 rounded-3xl transition"
-            >
-              Contact Us
-            </a>
-          </div>
-        </section>
+     
 
         {/* Information Security Section */}
         <section className="relative bg-[#101010] text-slate-50 py-16 px-4 md:px-8 lg:px-16">
@@ -512,28 +484,61 @@ export default function Home() {
               <p className="text-xl text-slate-400 mb-8">
                 This is your chance to lead the next industrial revolution.
               </p>
-              <button className="bg-blue-600 text-white px-10 py-5 rounded-full font-semibold text-lg hover:bg-blue-700 transition-all duration-300 transform hover:scale-105 shadow-lg">
+              <a href="#form" className="cursor-pointer bg-blue-600 text-white px-10 py-5 rounded-full font-semibold text-lg hover:bg-blue-700 transition-all duration-300 transform hover:scale-105 shadow-lg">
                 Apply for Early Access Now
-              </button>
+              </a>
             </div>
           </section>
         </div>
+           {/* Information Solution Section */}
+        <section className="relative  py-12 px-4 md:px-8 lg:px-16">
+          <div className="max-w-4xl mx-auto text-center">
+            <h2 className="text-2xl md:text-3xl font-semibold text-slate-50 mb-10">
+              Solutions
+            </h2>
+
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 text-slate-50 text-base md:text-lg mb-10">
+              <div className="bg-slate-900/50 shadow-sm  p-4 border border-slate-800 rounded-2xl">
+                Integration Services
+              </div>
+              <div className="bg-slate-900/50 shadow-sm  p-4 border border-slate-800 rounded-2xl ">
+                Custom Solutions
+              </div>
+              <div className="bg-slate-900/50 shadow-sm  p-4 border border-slate-800  rounded-2xl">
+                Enterprise Deployment
+              </div>
+              <div className="bg-slate-900/50 shadow-sm  p-4 border border-slate-800 rounded-2xl ">
+                Support & Training
+              </div>
+            </div>
+
+            <a
+              href="https://www.artisantec.io"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-block bg-blue-600 hover:bg-blue-700 text-white font-medium py-2 px-6 rounded-3xl transition"
+            >
+              Contact Us
+            </a>
+          </div>
+        </section>
       </div>
+      
 
       <p className="text-center py-1 font-semibold text-2xl text-white ">
         From Experts At
       </p>
       {/* University Section */}
-      <div className="overflow-hidden bg-white backdrop-blur-md py-4">
-        <div className="marquee">
-          {[...logos, ...logos].map((src, i) => (
+      <div className="overflow-hidden  backdrop-blur-md py-4">
+        <div className="flex flex-wrap justify-center items-center gap-14 max-w-6xl mx-auto ">
+          {[...logos].map((src, i) => (
             <Image
               key={i}
               src={src}
               alt={`logo-${i}`}
               width={80}
               height={80}
-              className="inline-block object-contain"
+              className=" gap-5 object-contain"
             />
           ))}
         </div>
@@ -549,9 +554,10 @@ export default function Home() {
                 alt="Artisan Edge Logo"
                 width={40}
                 height={40}
-                className="h-auto w-36 md:-ml-11 filter brightness-0 invert mb-6"
+                style={{ height: "auto", width: "auto" }}
+                className="h-auto md:-ml-34 filter brightness-0 invert mb-6"
               />
-              <p className="text-slate-400 text-sm leading-relaxed">
+              <p className="text-slate-400 md:-mt-10 text-sm leading-relaxed">
                 Artisan Technologies builds intelligent automation software that
                 connects machines, people, and data.
               </p>
