@@ -448,62 +448,62 @@ export default function Home() {
         </div>
 
         {/* Information Solution Section */}
-   <section className="relative  py-12 px-4 md:px-8 lg:px-16">
-      <div className="max-w-4xl mx-auto text-center">
-        <h2 className="text-2xl md:text-3xl font-semibold text-slate-50 mb-10">
-          Solutions
-        </h2>
+        <section className="relative  py-12 px-4 md:px-8 lg:px-16">
+          <div className="max-w-4xl mx-auto text-center">
+            <h2 className="text-2xl md:text-3xl font-semibold text-slate-50 mb-10">
+              Solutions
+            </h2>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 text-slate-50 text-base md:text-lg mb-10">
-          <div className="bg-slate-900/50 shadow-sm  p-4 border border-slate-800 rounded-2xl">
-            Integration Services
-          </div>
-          <div className="bg-slate-900/50 shadow-sm  p-4 border border-slate-800 rounded-2xl ">
-            Custom Solutions
-          </div>
-          <div className="bg-slate-900/50 shadow-sm  p-4 border border-slate-800  rounded-2xl">
-            Enterprise Deployment
-          </div>
-          <div className="bg-slate-900/50 shadow-sm  p-4 border border-slate-800 rounded-2xl ">
-            Support & Training
-          </div>
-        </div>
-
-        <a
-          href="https://www.artisantec.io"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="inline-block bg-blue-600 hover:bg-blue-700 text-white font-medium py-2 px-6 rounded-3xl transition"
-        >
-          Contact Us
-        </a>
-      </div>
-    </section>
-
-    {/* Information Security Section */}
-     <section className="relative bg-[#101010] text-slate-50 py-16 px-4 md:px-8 lg:px-16">
-      <div className="max-w-5xl mx-auto text-center">
-        <h2 className="text-3xl md:text-4xl font-bold mb-12 tracking-tight">
-          Enterprise-Grade Security
-        </h2>
-
-        <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
-          {[
-            "End-to-end TLS encryption",
-            "Role-based access controls",
-            "Offline-first execution",
-            "Audit logging & compliance",
-          ].map((item, i) => (
-            <div
-              key={i}
-              className="bg-[#1a1a1a] border border-[#2a2a2a] rounded-2xl p-6 text-base md:text-lg font-medium shadow-md hover:shadow-lg transition duration-200"
-            >
-              {item}
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 text-slate-50 text-base md:text-lg mb-10">
+              <div className="bg-slate-900/50 shadow-sm  p-4 border border-slate-800 rounded-2xl">
+                Integration Services
+              </div>
+              <div className="bg-slate-900/50 shadow-sm  p-4 border border-slate-800 rounded-2xl ">
+                Custom Solutions
+              </div>
+              <div className="bg-slate-900/50 shadow-sm  p-4 border border-slate-800  rounded-2xl">
+                Enterprise Deployment
+              </div>
+              <div className="bg-slate-900/50 shadow-sm  p-4 border border-slate-800 rounded-2xl ">
+                Support & Training
+              </div>
             </div>
-          ))}
-        </div>
-      </div>
-    </section>
+
+            <a
+              href="https://www.artisantec.io"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-block bg-blue-600 hover:bg-blue-700 text-white font-medium py-2 px-6 rounded-3xl transition"
+            >
+              Contact Us
+            </a>
+          </div>
+        </section>
+
+        {/* Information Security Section */}
+        <section className="relative bg-[#101010] text-slate-50 py-16 px-4 md:px-8 lg:px-16">
+          <div className="max-w-5xl mx-auto text-center">
+            <h2 className="text-3xl md:text-4xl font-bold mb-12 tracking-tight">
+              Enterprise-Grade Security
+            </h2>
+
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+              {[
+                "End-to-end TLS encryption",
+                "Role-based access controls",
+                "Offline-first execution",
+                "Audit logging & compliance",
+              ].map((item, i) => (
+                <div
+                  key={i}
+                  className="bg-[#1a1a1a] border border-[#2a2a2a] rounded-2xl p-6 text-base md:text-lg font-medium shadow-md hover:shadow-lg transition duration-200"
+                >
+                  {item}
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
 
         {/* Pilot Program Section */}
         <div className="relative">
@@ -545,44 +545,50 @@ export default function Home() {
           </section>
         </div>
       </div>
-      
-      <p className="text-center py-1 font-semibold text-2xl text-white ">From Experts At</p>
-      {/* University Section */}
-     <div className="overflow-hidden bg-white backdrop-blur-md py-4">
-      <div className="marquee">
-        {[...logos, ...logos].map((src, i) => (
-          <Image
-            key={i}
-            src={src}
-            alt={`logo-${i}`}
-            width={80}
-            height={80}
-            className="inline-block object-contain"
-          />
-        ))}
-      </div>
-    </div>
 
-      <footer className="bg-black py-12 text-slate-300">
-        <div className="max-w-7xl mx-auto px-4">
-          {/* Main footer content grid */}
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
-            {/* Company Info */}
-            <div className="lg:col-span-1">
+      <p className="text-center py-1 font-semibold text-2xl text-white ">
+        From Experts At
+      </p>
+      {/* University Section */}
+      <div className="overflow-hidden bg-white backdrop-blur-md py-4">
+        <div className="marquee">
+          {[...logos, ...logos].map((src, i) => (
+            <Image
+              key={i}
+              src={src}
+              alt={`logo-${i}`}
+              width={80}
+              height={80}
+              className="inline-block object-contain"
+            />
+          ))}
+        </div>
+      </div>
+
+      <footer className="bg-black py-16 text-slate-300">
+        <div className="max-w-7xl mx-auto px-6">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-12 mb-12">
+            {/* Column 1: Logo + About */}
+            <div>
               <Image
                 src="/logo.svg"
                 alt="Artisan Edge Logo"
-                width={120}
+                width={140}
                 height={40}
-                className="h-auto w-32 filter brightness-0 invert mb-6"
+                className="h-auto w-36 filter brightness-0 invert mb-6"
               />
-              <p className="text-slate-400 mb-6 text-sm">
+              <p className="text-slate-400 text-sm leading-relaxed">
                 Artisan Technologies builds intelligent automation software that
                 connects machines, people, and data.
               </p>
-              <div className="space-y-2 text-slate-400 text-sm">
-                <p>📧 sales@artisantec.io</p>
-                <p>
+            </div>
+
+            {/* Column 2: Contact */}
+            <div>
+              <h3 className="text-white font-semibold text-lg mb-4">Contact</h3>
+              <ul className="text-slate-400 text-sm space-y-2">
+                <li>📧 sales@artisantec.io</li>
+                <li>
                   🌐{" "}
                   <a
                     href="https://www.artisantec.io"
@@ -592,41 +598,15 @@ export default function Home() {
                   >
                     www.artisantec.io
                   </a>
-                </p>
-                <p>📞 (419) 481-6976</p>
-              </div>
-            </div>
-
-            {/* Security */}
-            <div>
-              <h3 className="text-lg font-semibold text-white mb-4">
-                Security
-              </h3>
-              <ul className="space-y-2 text-slate-400 text-sm">
-                <li>End-to-end TLS encryption</li>
-                <li>Role-based access controls</li>
-                <li>Offline-first execution</li>
-                <li>Audit logging & compliance</li>
+                </li>
+                <li>📞 (419) 481-6976</li>
               </ul>
             </div>
 
-            {/* Solutions */}
+            {/* Column 3: Quick Link */}
             <div>
-              <h3 className="text-lg font-semibold text-white mb-4">
-                Solutions
-              </h3>
-              <ul className="space-y-2 text-slate-400 text-sm">
-                <li>Custom Solutions</li>
-                <li>Enterprise Deployment</li>
-                <li>Integration Services</li>
-                <li>Support & Training</li>
-              </ul>
-            </div>
-
-            {/* ArtisanTech.io Link */}
-            <div className="flex flex-col justify-start">
-              <h3 className="text-lg font-semibold text-white mb-4">
-                ArtisanTech.io
+              <h3 className="text-white font-semibold text-lg mb-4">
+                Quick Link
               </h3>
               <a
                 href="https://www.artisantec.io"
@@ -639,9 +619,8 @@ export default function Home() {
             </div>
           </div>
 
-          {/* Copyright */}
-          <div className="border-t border-slate-800 pt-8 text-center text-slate-500 text-sm">
-            <p>&copy; 2025 Artisan Technologies. All rights reserved.</p>
+          <div className="border-t border-slate-800 pt-6 text-center text-slate-500 text-sm">
+            &copy; 2025 Artisan Technologies. All rights reserved.
           </div>
         </div>
       </footer>
