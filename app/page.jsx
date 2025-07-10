@@ -11,6 +11,9 @@ import {
   Warehouse,
   UtensilsCrossed,
   Wrench,
+  Shield,
+  School,
+  Settings,
 } from "lucide-react";
 
 export default function Home() {
@@ -18,6 +21,29 @@ export default function Home() {
   const [scrollAnimationtwo, setScrollAnimationtwo] = useState(false);
   const [scrollAnimationthree, setScrollAnimationthree] = useState(false);
   const [scrollAnimationfour, setScrollAnimationfour] = useState(false);
+
+  const [hovered, setHovered] = useState(null);
+
+  const items = [
+    {
+      key: "uni",
+      icon: <School className="w-8 h-8 text-white" />,
+      title: "From Experts at",
+      content: `Our platform is built by industry experts from leading institutions like Rice University, Boston College, University of Toledo, University of Pittsburgh, University of Houston, University of Texas-Dallas, and Arizona State University.`,
+    },
+    {
+      key: "security",
+      icon: <Shield className="w-8 h-8 text-white" />,
+      title: "Security",
+      content: `• End-to-end TLS encryption\n• Role-based access controls\n• Offline-first execution\n• Audit logging & compliance`,
+    },
+    {
+      key: "solutions",
+      icon: <Settings className="w-8 h-8 text-white" />,
+      title: "Solutions",
+      content: `• Custom Solutions\n• Enterprise Deployment\n• Integration Services\n• Support & Training`,
+    },
+  ];
 
   const companyLogos = [
     "/aws.png",
@@ -402,6 +428,30 @@ export default function Home() {
             </div>
           </section>
         </div>
+        <div className="flex gap-8 justify-center items-start p-6">
+          {items.map(({ key, icon, title, content }) => (
+            <div
+              key={key}
+              className="relative flex flex-col items-center group"
+              onMouseEnter={() => setHovered(key)}
+              onMouseLeave={() => setHovered(null)}
+            >
+              <div className="cursor-pointer  p-4 bg-white/10 backdrop-blur-sm shadow-lg rounded-full hover:scale-110 transition-transform">
+                {icon}
+              </div>
+
+              {/* Hover Modal */}
+              {hovered === key && (
+                <div className="absolute top-16 z-10 w-72 p-4 bg-white border shadow-xl rounded-xl transition-opacity duration-200">
+                  <h3 className="font-semibold text-gray-800 mb-2">{title}</h3>
+                  <p className="text-sm whitespace-pre-line text-gray-600">
+                    {content}
+                  </p>
+                </div>
+              )}
+            </div>
+          ))}
+        </div>
 
         {/* Pilot Program Section */}
         <div className="relative">
@@ -443,73 +493,79 @@ export default function Home() {
           </section>
         </div>
       </div>
-{/* Footer */}
-    <footer className="bg-black py-12 text-slate-300">
-      <div className="max-w-7xl mx-auto px-4">
-        {/* Main footer content grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
-          {/* Company Info */}
-          <div className="lg:col-span-1">
-            <Image
-              src="/logo.svg"
-              alt="Artisan Edge Logo"
-              width={120}
-              height={40}
-              className="h-auto w-32 filter brightness-0 invert mb-6"
-            />
-            <p className="text-slate-400 mb-6 text-sm">
-              Artisan Technologies builds intelligent automation software that connects machines, people, and data.
-            </p>
-            <div className="space-y-2 text-slate-400 text-sm">
-              <p>📧 sales@artisantec.io</p>
-              <p>🌐 www.artisantec.io</p>
-              <p>📞 (419) 481-6976</p>
-            </div>
-          </div>
 
-          {/* University Affiliations ✨ NEW SECTION */}
-          <div>
-            <h3 className="text-lg font-semibold text-white mb-4">
-              From Experts at
-            </h3>
-            <p className="text-slate-400 text-sm leading-relaxed">
-              Our platform is built by industry experts from leading institutions like Rice University, Boston College, University of Toledo, University of Pittsburgh, University of Houston, University of Texas-Dallas, and Arizona State University.
-            </p>
-          </div>
-
-          {/* Security */}
-          <div>
-            <h3 className="text-lg font-semibold text-white mb-4">
-              Security
-            </h3>
-            <ul className="space-y-2 text-slate-400 text-sm">
-              <li>End-to-end TLS encryption</li>
-              <li>Role-based access controls</li>
-              <li>Offline-first execution</li>
-              <li>Audit logging & compliance</li>
-            </ul>
-          </div>
-
-          {/* Solutions */}
-          <div>
-            <h3 className="text-lg font-semibold text-white mb-4">
-              Solutions
-            </h3>
-            <ul className="space-y-2 text-slate-400 text-sm">
-              <li>Custom Solutions</li>
-              <li>Enterprise Deployment</li>
-              <li>Integration Services</li>
-              <li>Support & Training</li>
-            </ul>
-          </div>
-        </div>
-
-        {/* Copyright */}
-        <div className="border-t border-slate-800 pt-8 text-center text-slate-500">
-          <p>&copy; 2025 Artisan Technologies. All rights reserved.</p>
+<footer className="bg-black py-12 text-slate-300">
+  <div className="max-w-7xl mx-auto px-4">
+    {/* Main footer content grid */}
+    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
+      {/* Company Info */}
+      <div className="lg:col-span-1">
+        <Image
+          src="/logo.svg"
+          alt="Artisan Edge Logo"
+          width={120}
+          height={40}
+          className="h-auto w-32 filter brightness-0 invert mb-6"
+        />
+        <p className="text-slate-400 mb-6 text-sm">
+          Artisan Technologies builds intelligent automation software that
+          connects machines, people, and data.
+        </p>
+        <div className="space-y-2 text-slate-400 text-sm">
+          <p>📧 sales@artisantec.io</p>
+          <p>🌐 <a href="https://www.artisantec.io" target="_blank" rel="noopener noreferrer" className="hover:underline">www.artisantec.io</a></p>
+          <p>📞 (419) 481-6976</p>
         </div>
       </div>
-    </footer>
+
+      {/* Security */}
+      <div>
+        <h3 className="text-lg font-semibold text-white mb-4">
+          Security
+        </h3>
+        <ul className="space-y-2 text-slate-400 text-sm">
+          <li>End-to-end TLS encryption</li>
+          <li>Role-based access controls</li>
+          <li>Offline-first execution</li>
+          <li>Audit logging & compliance</li>
+        </ul>
+      </div>
+
+      {/* Solutions */}
+      <div>
+        <h3 className="text-lg font-semibold text-white mb-4">
+          Solutions
+        </h3>
+        <ul className="space-y-2 text-slate-400 text-sm">
+          <li>Custom Solutions</li>
+          <li>Enterprise Deployment</li>
+          <li>Integration Services</li>
+          <li>Support & Training</li>
+        </ul>
+      </div>
+
+      {/* ArtisanTech.io Link */}
+      <div className="flex flex-col justify-start">
+        <h3 className="text-lg font-semibold text-white mb-4">
+          ArtisanTech.io
+        </h3>
+        <a
+          href="https://www.artisantec.io"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="text-slate-400 text-sm hover:underline transition duration-200"
+        >
+          Visit ArtisanTech.io →
+        </a>
+      </div>
+    </div>
+
+    {/* Copyright */}
+    <div className="border-t border-slate-800 pt-8 text-center text-slate-500 text-sm">
+      <p>&copy; 2025 Artisan Technologies. All rights reserved.</p>
+    </div>
+  </div>
+</footer>
     </div>
   );
 }
