@@ -53,6 +53,16 @@ export default function Home() {
     },
   ];
 
+  const logos = [
+    "/ru.png",
+    "/bu.png",
+    "/asu.png",
+    "/up.png",
+    "/uh.png",
+    "/utd.png",
+    "/ut.png",
+  ];
+
   const companyLogos = [
     "/aws.png",
     "/nvidia.png",
@@ -85,11 +95,11 @@ export default function Home() {
           {/* Logo */}
           <div className="flex items-center">
             <Image
-              src="/logo.svg"
+              src="/logo-1.svg"
               alt="Artisan Edge Logo"
               width={100}
               height={100}
-              className="h-16 md:h-28 w-auto filter brightness-0 invert"
+              className="h-16 md:h-32 w-auto filter"
             />
           </div>
         </div>
@@ -437,55 +447,63 @@ export default function Home() {
           </section>
         </div>
 
-        {/* Information Section */}
-     <div className="flex flex-col md:flex-row items-start md:items-center gap-4 md:gap-12 p-6 w-full">
-      {/* Sidebar Icons */}
-      <div className="flex md:flex-col gap-6 md:gap-8">
-  {items.map(({ key, icon }) => (
-    <div key={key} className="flex flex-col items-center">
-      <button
-        onClick={() => setOpenKey(openKey === key ? null : key)}
-        className="p-3 bg-white/10 backdrop-blur-sm rounded-full shadow hover:scale-110 transition-transform"
-      >
-        {icon}
-      </button>
-      <span className="mt-2 z-20 text-xs text-slate-400 text-center">Tap to view</span>
-    </div>
-  ))}
-</div>
+        {/* Information Solution Section */}
+   <section className="relative  py-12 px-4 md:px-8 lg:px-16">
+      <div className="max-w-4xl mx-auto text-center">
+        <h2 className="text-2xl md:text-3xl font-semibold text-slate-50 mb-10">
+          Solutions
+        </h2>
 
-      {/* Modal Display */}
-      <div className="flex-1 w-full max-w-3xl relative min-h-[220px]">
-        {items.map(({ key, title, content, logos }) =>
-          openKey === key ? (
-            <div
-              key={key}
-              className="absolute left-0 top-0 w-full bg-white rounded-xl border shadow-xl p-6"
-            >
-              <h3 className="text-xl font-semibold text-gray-800 mb-4">
-                {title}
-              </h3>
-              {logos ? (
-                <div className="grid grid-cols-2 sm:grid-cols-3 gap-4">
-                  {logos.map((src, i) => (
-                    <Image
-                      key={i}
-                      src={src}
-                      alt="University Logo"
-                      width={100}
-                      height={50}
-                      className="object-contain h-12 w-auto grayscale hover:grayscale-0 transition"
-                    />
-                  ))}
-                </div>
-              ) : (
-                <p className="text-sm whitespace-pre-line text-gray-600">{content}</p>
-              )}
-            </div>
-          ) : null
-        )}
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 text-slate-50 text-base md:text-lg mb-10">
+          <div className="bg-slate-900/50 shadow-sm  p-4 border border-slate-800 rounded-2xl">
+            Integration Services
+          </div>
+          <div className="bg-slate-900/50 shadow-sm  p-4 border border-slate-800 rounded-2xl ">
+            Custom Solutions
+          </div>
+          <div className="bg-slate-900/50 shadow-sm  p-4 border border-slate-800  rounded-2xl">
+            Enterprise Deployment
+          </div>
+          <div className="bg-slate-900/50 shadow-sm  p-4 border border-slate-800 rounded-2xl ">
+            Support & Training
+          </div>
+        </div>
+
+        <a
+          href="https://www.artisantec.io"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="inline-block bg-blue-600 hover:bg-blue-700 text-white font-medium py-2 px-6 rounded-3xl transition"
+        >
+          Contact Us
+        </a>
       </div>
-    </div>
+    </section>
+
+    {/* Information Security Section */}
+     <section className="relative bg-[#101010] text-slate-50 py-16 px-4 md:px-8 lg:px-16">
+      <div className="max-w-5xl mx-auto text-center">
+        <h2 className="text-3xl md:text-4xl font-bold mb-12 tracking-tight">
+          Enterprise-Grade Security
+        </h2>
+
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+          {[
+            "End-to-end TLS encryption",
+            "Role-based access controls",
+            "Offline-first execution",
+            "Audit logging & compliance",
+          ].map((item, i) => (
+            <div
+              key={i}
+              className="bg-[#1a1a1a] border border-[#2a2a2a] rounded-2xl p-6 text-base md:text-lg font-medium shadow-md hover:shadow-lg transition duration-200"
+            >
+              {item}
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
 
         {/* Pilot Program Section */}
         <div className="relative">
@@ -527,6 +545,23 @@ export default function Home() {
           </section>
         </div>
       </div>
+      
+      <p className="text-center py-1 font-semibold text-2xl text-white ">From Experts At</p>
+      {/* University Section */}
+     <div className="overflow-hidden bg-white backdrop-blur-md py-4">
+      <div className="marquee">
+        {[...logos, ...logos].map((src, i) => (
+          <Image
+            key={i}
+            src={src}
+            alt={`logo-${i}`}
+            width={80}
+            height={80}
+            className="inline-block object-contain"
+          />
+        ))}
+      </div>
+    </div>
 
       <footer className="bg-black py-12 text-slate-300">
         <div className="max-w-7xl mx-auto px-4">

@@ -88,6 +88,21 @@
     transform: translateX(0);
   }
 }
+@keyframes scroll-left-to-right {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(100%);
+  }
+}
+
+.marquee {
+  display: flex;
+  gap: 2rem;
+  animation: scroll-left-to-right 20s linear infinite;
+  white-space: nowrap;
+}
 
 
 .animate-slide-right {
