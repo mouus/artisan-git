@@ -101,7 +101,7 @@
   display: flex;
   gap: 2rem;
   animation: scroll-left-to-right 40s linear infinite;
-  white-space: wrap;
+  white-space: nowrap;
 }
 
 

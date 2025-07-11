@@ -552,7 +552,7 @@ export default function Home() {
                     alt={`Company Logo ${index + 1}`}
                     className="h-28 w-28 md:h-28 md:w-28 rounded-full py-2 px-2 bg-white object-contain"
                   />
-                  <div className="text-center text-slate-950 bg-white rounded-full py-10 px-11">
+                  <div className="text-center text-slate-950 bg-white rounded-full py-11 px-10">
                     <p className=" font-bold">lilie</p>
                   </div>
                 </div>
@@ -575,7 +575,7 @@ export default function Home() {
               alt={`logo-${i}`}
               width={80}
               height={80}
-              className="inline-block object-contain"
+              className="inline-block bring object-contain"
             />
           ))}
         </div>
