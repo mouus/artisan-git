@@ -27,11 +27,11 @@ export default function Home() {
   const logos = [
     "/ru.png",
     "/bc.png",
-    "/asu.svg",
+    "/asu.png",
     "/up.png",
-    "/uh.svg",
+    "/uh.png",
     "/utd.png",
-    "/ut.svg",
+    "/ut.png",
   ];
 
   const companyLogos = [
@@ -39,11 +39,12 @@ export default function Home() {
     "/motion.png",
     "/aws.png",
     "/nvidia.png",
-    "/peach.png",
     "/gpk.jpg",
     "/rogue.png",
   ];
   const companyLogos2 = ["/honeywell.png", "/disney.png", "/cdw.png"];
+  const companyLogos3 = ["/peach.png",];
+
 
   useEffect(() => {
     const handleScroll = () => {
@@ -263,7 +264,7 @@ export default function Home() {
             >
               <div className="p-6 bg-slate-900 rounded-xl shadow-md border border-slate-700">
                 <h3 className="text-xl font-bold mb-2 text-blue-400">
-                  Connect Anything
+                  Connect-Anything
                 </h3>
                 <p className="text-slate-300">
                   Instantly integrate legacy PLCs, robotics, barcode scanners,
@@ -285,7 +286,7 @@ export default function Home() {
             >
               <div className="p-6 bg-slate-900 rounded-xl shadow-md border border-slate-700">
                 <h3 className="text-xl font-bold mb-2 text-blue-400">
-                  Visual Automation
+                  Visual-Automation
                 </h3>
                 <p className="text-slate-300">
                   Build powerful workflows in minutes with zero coding
@@ -346,7 +347,7 @@ export default function Home() {
           {/* Trusted by section */}
           <div className="max-w-6xl mx-auto mt-16">
             <h3 className="text-center text-gray-400 text-lg mb-8">
-              Trusted, Backed, or Supported By
+              Trusted, Backed, and Supported By
             </h3>
             <div className="flex flex-wrap justify-center items-center gap-8 md:gap-12">
               {companyLogos.map((logo, index) => (
@@ -360,7 +361,7 @@ export default function Home() {
               ))}
             </div>
             <h3 className="text-center text-gray-400 text-lg pt-6 mb-8">
-              Companies Our Team Has Worked For and With
+              Our team is from industry leaders Like
             </h3>
             <div className="flex flex-wrap justify-center items-center gap-8 pt- md:gap-12">
               {companyLogos2.map((logo, index) => (
@@ -510,7 +511,7 @@ export default function Home() {
         <section className="relative  py-12 px-4 md:px-8 lg:px-16">
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="text-2xl md:text-3xl font-semibold text-slate-50 mb-10">
-              Solutions
+              For Catered and Bespoke Solutions
             </h2>
 
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 text-slate-50 text-base md:text-lg mb-10">
@@ -538,27 +539,47 @@ export default function Home() {
             </a>
           </div>
         </section>
+        {/* Our Team Accelerator Section */}
+          <div className="relative">
+           <h3 className="text-center text-gray-400 text-lg pt-6 mb-8">
+              Artisan Edge has been supported by the following Acclerators
+            </h3>
+            <div className="flex  justify-center items-center gap-8 pt- md:gap-12">
+              {companyLogos3.map((logo, index) => (
+                <div key={index} className="p-2 flex gap-4  rounded-full">
+                  <img
+                    src={logo}
+                    alt={`Company Logo ${index + 1}`}
+                    className="h-28 w-28 md:h-28 md:w-28 rounded-full py-2 px-2 bg-white object-contain"
+                  />
+                  <div className="text-center text-slate-950 bg-white rounded-full py-10 px-11">
+                    <p className=" font-bold">lilie</p>
+                  </div>
+                </div>
+              ))}
+            </div>
       </div>
+      </div>
+    
 
       <p className="text-center py-1 font-semibold text-2xl text-white ">
-        From Experts At
+        Our Artisans are from leading institutions
       </p>
-      {/* University Section */}
-      <div className="overflow-hidden bg-white  backdrop-blur-md py-4">
-        <div className="flex flex-wrap justify-center items-center gap-14 max-w-6xl mx-auto ">
-          {[...logos].map((src, i) => (
+       {/* University Section */}
+      <div className="overflow-hidden bg-white backdrop-blur-md py-4">
+        <div className="marquee">
+          {[...logos, ...logos].map((src, i) => (
             <Image
               key={i}
               src={src}
               alt={`logo-${i}`}
               width={80}
               height={80}
-              className=" gap-5 object-contain"
+              className="inline-block object-contain"
             />
           ))}
         </div>
       </div>
-
       <footer className="bg-black py-16 text-slate-300">
         <div className="max-w-7xl mx-auto px-6">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-12 mb-12">
