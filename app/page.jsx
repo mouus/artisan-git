@@ -22,14 +22,13 @@ export default function Home() {
   const [scrollAnimationthree, setScrollAnimationthree] = useState(false);
   const [scrollAnimationfour, setScrollAnimationfour] = useState(false);
 
-  const [openKey, setOpenKey] = useState(null);
-
+  // Logos for universities and companies
   const logos = [
-    "/ru.png",
+    "/rice.svg",
     "/bc.png",
     "/asu.png",
     "/up.png",
-    "/uh.png",
+    "/uh.svg",
     "/utd.png",
     "/ut.png",
   ];
@@ -43,7 +42,7 @@ export default function Home() {
     "/rogue.png",
   ];
   const companyLogos2 = ["/honeywell.png", "/disney.png", "/cdw.png"];
-  const companyLogos3 = ["/peach.png",];
+  const companyLogos3 = ["/peach1.png",];
 
 
   useEffect(() => {
@@ -561,13 +560,12 @@ export default function Home() {
       </div>
       </div>
     
-
+      {/* University Section */}
       <p className="text-center py-1 font-semibold text-2xl text-white ">
         Our Artisans are from leading institutions
       </p>
-       {/* University Section */}
-      <div className="overflow-hidden bg-white backdrop-blur-md py-4">
-        <div className="marquee">
+      <div className="overflow-hidden backdrop-blur-md py-4">
+        <div className="marquee items-center">
           {[...logos, ...logos].map((src, i) => (
             <Image
               key={i}
@@ -575,11 +573,12 @@ export default function Home() {
               alt={`logo-${i}`}
               width={80}
               height={80}
-              className="inline-block bring object-contain"
+              className="inline-block bring object-contain "
             />
           ))}
         </div>
       </div>
+
       <footer className="bg-black py-16 text-slate-300">
         <div className="max-w-7xl mx-auto px-6">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-12 mb-12">
