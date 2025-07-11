@@ -565,13 +565,13 @@ export default function Home() {
      <div className="overflow-hidden items-center backdrop-blur-md py-4">
   <div className="marquee flex items-center">
     {[...logos, ...logos].map((src, i) => {
-      const isSpecialLogo = src.includes('utd.svg') || src.includes('asu.png');
+      const isSpecialLogo = src.includes('utd.svg') || src.includes('asu.png') || src.includes('ut.png');
       const size = isSpecialLogo ? '200px' : '80px';
 
       return (
         <div
           key={i}
-          className={`flex-shrink-0 mx-4 flex items-center justify-center  ${src.includes('utd') && '-mb-10'}`}
+          className={`flex-shrink-0 mx-4 flex items-center justify-center  ${src.includes('utd') && '-mb-10 -ml-10 -mr-10'}`}
           style={{ width: size, height: size }}
         >
           <Image
