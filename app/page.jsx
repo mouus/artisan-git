@@ -29,7 +29,7 @@ export default function Home() {
     "/asu.png",
     "/up.png",
     "/uh.svg",
-    "/utd.png",
+    "/utd.svg",
     "/ut.png",
   ];
 
@@ -42,8 +42,7 @@ export default function Home() {
     "/rogue.png",
   ];
   const companyLogos2 = ["/honeywell.png", "/disney.png", "/cdw.png"];
-  const companyLogos3 = ["/peach1.png",];
-
+  const companyLogos3 = ["/peach1.png", "lili.jpg"];
 
   useEffect(() => {
     const handleScroll = () => {
@@ -460,7 +459,9 @@ export default function Home() {
                 </div>
               ))}
             </div>
-            <p className="pt-4 mt-2 font-semibold text-xl">We follow industry-best standards for security practices</p>
+            <p className="pt-4 mt-2 font-semibold text-xl">
+              We follow industry-best standards for security practices
+            </p>
           </div>
         </section>
 
@@ -539,45 +540,52 @@ export default function Home() {
           </div>
         </section>
         {/* Our Team Accelerator Section */}
-          <div className="relative">
-           <h3 className="text-center text-gray-400 text-lg pt-6 mb-8">
-              Artisan Edge has been supported by the following Acclerators
-            </h3>
-            <div className="flex  justify-center items-center gap-8 pt- md:gap-12">
-              {companyLogos3.map((logo, index) => (
-                <div key={index} className="p-2 flex gap-4  rounded-full">
-                  <img
-                    src={logo}
-                    alt={`Company Logo ${index + 1}`}
-                    className="h-28 w-28 md:h-28 md:w-28 rounded-full py-2 px-2 bg-white object-contain"
-                  />
-                  <div className="text-center text-slate-950 bg-white rounded-full py-11 px-10">
-                    <p className=" font-bold">lilie</p>
-                  </div>
-                </div>
-              ))}
-            </div>
+        <div className="relative">
+          <h3 className="text-center text-gray-400 text-lg pt-6 mb-8">
+            Artisan Edge has been supported by the following Acclerators
+          </h3>
+          <div className="flex  justify-center items-center gap-8 pt- md:gap-12">
+            {companyLogos3.map((logo, index) => (
+              <div key={index} className="p-2 flex gap-4  rounded-full">
+                <img
+                  src={logo}
+                  alt={`Company Logo ${index + 1}`}
+                  className="h-28 w-28 md:h-28 md:w-28 rounded-full py-2 px-2 bg-white object-contain"
+                />
+              </div>
+            ))}
+          </div>
+        </div>
       </div>
-      </div>
-    
+
       {/* University Section */}
       <p className="text-center py-1 font-semibold text-2xl text-white ">
         Our Artisans are from leading institutions
       </p>
-      <div className="overflow-hidden backdrop-blur-md py-4">
-        <div className="marquee items-center">
-          {[...logos, ...logos].map((src, i) => (
-            <Image
-              key={i}
-              src={src}
-              alt={`logo-${i}`}
-              width={80}
-              height={80}
-              className="inline-block bring object-contain "
-            />
-          ))}
+     <div className="overflow-hidden items-center backdrop-blur-md py-4">
+  <div className="marquee flex items-center">
+    {[...logos, ...logos].map((src, i) => {
+      const isSpecialLogo = src.includes('utd.svg') || src.includes('asu.png');
+      const size = isSpecialLogo ? '200px' : '80px';
+
+      return (
+        <div
+          key={i}
+          className={`flex-shrink-0 mx-4 flex items-center justify-center  ${src.includes('utd') && '-mb-10'}`}
+          style={{ width: size, height: size }}
+        >
+          <Image
+            src={src}
+            alt={`logo-${i}`}
+            width={isSpecialLogo ? 100 : 80}
+            height={isSpecialLogo ? 100 : 80}
+            className="object-contain w-full h-full"
+          />
         </div>
-      </div>
+      );
+    })}
+  </div>
+</div>
 
       <footer className="bg-black py-16 text-slate-300">
         <div className="max-w-7xl mx-auto px-6">
