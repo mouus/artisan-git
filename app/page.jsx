@@ -24,15 +24,14 @@ export default function Home() {
 
   const [openKey, setOpenKey] = useState(null);
 
-
   const logos = [
     "/ru.png",
     "/bc.png",
-    "/asu.png",
+    "/asu.svg",
     "/up.png",
-    "/uh.png",
+    "/uh.svg",
     "/utd.png",
-    "/ut.png",
+    "/ut.svg",
   ];
 
   const companyLogos = [
@@ -43,10 +42,8 @@ export default function Home() {
     "/peach.png",
     "/gpk.jpg",
     "/rogue.png",
-    "/honeywell.png",
-    "/disney.png",
-    "/cdw.png",
   ];
+  const companyLogos2 = ["/honeywell.png", "/disney.png", "/cdw.png"];
 
   useEffect(() => {
     const handleScroll = () => {
@@ -140,7 +137,10 @@ export default function Home() {
 
           {/* Right Side: Form Section */}
           <div className="w-full md:w-2/5 lg:w-1/2 md:mt-11 max-w-md mx-auto">
-            <form id="form" className=" bg-white/95 backdrop-blur-lg p-6 rounded-2xl space-y-4 border border-slate-300 shadow-2xl">
+            <form
+              id="form"
+              className=" bg-white/95 backdrop-blur-lg p-6 rounded-2xl space-y-4 border border-slate-300 shadow-2xl"
+            >
               <div className="text-center mb-4">
                 <h2 className="text-2xl md:text-3xl text-blue-950 font-bold mb-1">
                   Reserve Your Spot
@@ -359,6 +359,20 @@ export default function Home() {
                 </div>
               ))}
             </div>
+            <h3 className="text-center text-gray-400 text-lg pt-6 mb-8">
+              Companies Our Team Has Worked For and With
+            </h3>
+            <div className="flex flex-wrap justify-center items-center gap-8 pt- md:gap-12">
+              {companyLogos2.map((logo, index) => (
+                <div key={index} className="p-2  rounded-full">
+                  <img
+                    src={logo}
+                    alt={`Company Logo ${index + 1}`}
+                    className="h-28 w-28 md:h-28 md:w-28 rounded-full py-2 px-2 bg-white object-contain"
+                  />
+                </div>
+              ))}
+            </div>
           </div>
         </div>
       </div>
@@ -424,8 +438,6 @@ export default function Home() {
           </section>
         </div>
 
-     
-
         {/* Information Security Section */}
         <section className="relative bg-[#101010] text-slate-50 py-16 px-4 md:px-8 lg:px-16">
           <div className="max-w-5xl mx-auto text-center">
@@ -448,6 +460,7 @@ export default function Home() {
                 </div>
               ))}
             </div>
+            <p className="pt-4 mt-2 font-semibold text-xl">We follow industry-best standards for security practices</p>
           </div>
         </section>
 
@@ -484,13 +497,16 @@ export default function Home() {
               <p className="text-xl text-slate-400 mb-8">
                 This is your chance to lead the next industrial revolution.
               </p>
-              <a href="#form" className="cursor-pointer bg-blue-600 text-white px-10 py-5 rounded-full font-semibold text-lg hover:bg-blue-700 transition-all duration-300 transform hover:scale-105 shadow-lg">
+              <a
+                href="#form"
+                className="cursor-pointer bg-blue-600 text-white px-10 py-5 rounded-full font-semibold text-lg hover:bg-blue-700 transition-all duration-300 transform hover:scale-105 shadow-lg"
+              >
                 Apply for Early Access Now
               </a>
             </div>
           </section>
         </div>
-           {/* Information Solution Section */}
+        {/* Information Solution Section */}
         <section className="relative  py-12 px-4 md:px-8 lg:px-16">
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="text-2xl md:text-3xl font-semibold text-slate-50 mb-10">
@@ -523,13 +539,12 @@ export default function Home() {
           </div>
         </section>
       </div>
-      
 
       <p className="text-center py-1 font-semibold text-2xl text-white ">
         From Experts At
       </p>
       {/* University Section */}
-      <div className="overflow-hidden  backdrop-blur-md py-4">
+      <div className="overflow-hidden bg-white  backdrop-blur-md py-4">
         <div className="flex flex-wrap justify-center items-center gap-14 max-w-6xl mx-auto ">
           {[...logos].map((src, i) => (
             <Image
